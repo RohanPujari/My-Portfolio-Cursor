@@ -6,6 +6,7 @@
   <title>Rohan Pujari | Data Scientist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {
       box-sizing: border-box;
@@ -15,7 +16,7 @@
     }
 
     body {
-      background-color: #000;
+      background: linear-gradient(180deg, #000 0%, #0a0a23 100%);
       color: #fff;
       scroll-behavior: smooth;
     }
@@ -50,13 +51,22 @@
       justify-content: center;
       height: 100vh;
       text-align: center;
-      background: linear-gradient(145deg, #111, #222);
+      background: radial-gradient(circle at center, #222, #000);
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin-bottom: 1.5rem;
     }
 
     .hero h2 {
       font-size: 3rem;
       font-weight: 800;
       margin-bottom: 1rem;
+      color: #00e6e6;
     }
 
     .hero p {
@@ -73,11 +83,22 @@
     h3 {
       font-size: 2rem;
       margin-bottom: 1rem;
+      color: #00e6e6;
     }
 
     ul li {
       margin-bottom: 0.75rem;
       line-height: 1.6;
+    }
+
+    .tech-icons {
+      margin-top: 1rem;
+    }
+
+    .tech-icons i {
+      font-size: 2rem;
+      margin: 0.5rem;
+      color: #00bfff;
     }
 
     .footer {
@@ -96,11 +117,13 @@
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
       <a href="#education">Education</a>
     </nav>
   </header>
 
   <section class="hero">
+    <img src="your-image.jpg" alt="Rohan Pujari">
     <h2>Data Scientist & ML Engineer</h2>
     <p>Solving real-world problems with machine learning, NLP, and cloud-first solutions.</p>
   </section>
@@ -119,6 +142,15 @@
       <li><strong>ML/NLP:</strong> TensorFlow, Scikit-learn, Transformers, BERT</li>
       <li><strong>Big Data:</strong> Spark, Hadoop, Kafka</li>
     </ul>
+    <div class="tech-icons">
+      <i class="fab fa-python" title="Python"></i>
+      <i class="fas fa-database" title="SQL"></i>
+      <i class="fab fa-aws" title="AWS"></i>
+      <i class="fas fa-chart-line" title="Power BI"></i>
+      <i class="fab fa-google" title="GCP"></i>
+      <i class="fab fa-github" title="GitHub"></i>
+      <i class="fas fa-robot" title="ML/NLP"></i>
+    </div>
   </section>
 
   <section id="experience">
@@ -133,6 +165,11 @@
     Developed ETL pipelines, automated SQL/Python reports, and built predictive models for business ops and client reporting.</p>
   </section>
 
+  <section id="projects">
+    <h3>Academic Projects</h3>
+    <p>[You can fill this section with your academic project details.]</p>
+  </section>
+
   <section id="education">
     <h3>Education</h3>
     <ul>
@@ -144,5 +181,16 @@
   <div class="footer">
     &copy; 2025 Rohan Pujari. All Rights Reserved.
   </div>
+
+  <script>
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
