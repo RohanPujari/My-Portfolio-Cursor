@@ -3,135 +3,146 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rohan Pujari | Data Scientist Portfolio</title>
+  <title>Rohan Pujari | Data Scientist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #232f3e;
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
+      font-family: 'Inter', sans-serif;
     }
 
-    nav {
+    body {
+      background-color: #000;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #111;
+      padding: 1rem 2rem;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 1rem 0;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 800;
     }
 
     nav a {
-      color: #232f3e;
+      color: #fff;
+      margin-left: 1.5rem;
       text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      background: linear-gradient(145deg, #111, #222);
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
     }
 
     section {
+      padding: 4rem 2rem;
       max-width: 900px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      margin: auto;
     }
 
-    h2 {
-      color: #0073bb;
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
-    ul {
-      padding-left: 1.5rem;
+    ul li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
     }
 
-    .contact a {
-      color: #0073bb;
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #111;
+      color: #aaa;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Rohan Pujari</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Rohan Pujari</h1>
-  <p>Data Scientist | NLP | ML | MLOps</p>
-  <div class="contact">
-    <p><a href="mailto:rohanpujari1001@gmail.com">rohanpujari1001@gmail.com</a> |
-    <a href="https://www.linkedin.com/in/rohanpujari/">LinkedIn</a> |
-    <a href="https://github.com/RohanPujari">GitHub</a></p>
+  <section class="hero">
+    <h2>Data Scientist & ML Engineer</h2>
+    <p>Solving real-world problems with machine learning, NLP, and cloud-first solutions.</p>
+  </section>
+
+  <section id="about">
+    <h3>About Me</h3>
+    <p>With over 5 years of experience in data science and analytics, I specialize in machine learning, predictive modeling, and natural language processing. My work has helped institutions improve rankings, optimize operations, and gain strategic insights through AI-driven solutions.</p>
+  </section>
+
+  <section id="skills">
+    <h3>Skills</h3>
+    <ul>
+      <li><strong>Languages:</strong> Python, SQL, R</li>
+      <li><strong>Cloud:</strong> AWS (S3, Bedrock, Glue), Azure, GCP</li>
+      <li><strong>Visualization:</strong> Power BI, Tableau, MicroStrategy</li>
+      <li><strong>ML/NLP:</strong> TensorFlow, Scikit-learn, Transformers, BERT</li>
+      <li><strong>Big Data:</strong> Spark, Hadoop, Kafka</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h3>Experience</h3>
+    <p><strong>Comnatix LLC (2024 – Present)</strong><br />
+    Built AI-driven systems for document processing using Bedrock & LLMs, automating PDF data pipelines into JSON & SQLite.</p>
+
+    <p><strong>NJIT (2022 – 2024)</strong><br />
+    Deployed ML models for university ranking predictions; built interactive dashboards with MicroStrategy & Plotly.</p>
+
+    <p><strong>L&T Infotech (2019 – 2022)</strong><br />
+    Developed ETL pipelines, automated SQL/Python reports, and built predictive models for business ops and client reporting.</p>
+  </section>
+
+  <section id="education">
+    <h3>Education</h3>
+    <ul>
+      <li><strong>M.S. in Data Science</strong>, NJIT, USA</li>
+      <li><strong>PG Diploma in Data Science</strong>, IIIT Bangalore, India</li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    &copy; 2025 Rohan Pujari. All Rights Reserved.
   </div>
-</header>
-
-<nav>
-  <a onclick="showSection('summary')">Summary</a>
-  <a onclick="showSection('skills')">Skills</a>
-  <a onclick="showSection('experience')">Experience</a>
-  <a onclick="showSection('education')">Education</a>
-</nav>
-
-<section id="summary">
-  <h2>Summary</h2>
-  <p>Data Science professional with 5+ years of experience in machine learning, predictive analytics, and NLP. Skilled in delivering actionable insights using Python, Random Forest, K-NN, Conv3D, and advanced text analysis. Proficient in real-time data visualization with Power BI and MicroStrategy, contributing to improved institutional rankings and operational strategy.</p>
-</section>
-
-<section id="skills" style="display:none">
-  <h2>Technical Skills</h2>
-  <ul>
-    <li><strong>Programming:</strong> Python, SQL, R</li>
-    <li><strong>Cloud:</strong> AWS (S3, IAM, Glue, Bedrock), Azure, GCP, Snowflake</li>
-    <li><strong>Big Data:</strong> Spark, Kafka, Hadoop</li>
-    <li><strong>Visualization:</strong> Tableau, Power BI, Excel, Streamlit, MicroStrategy</li>
-    <li><strong>ML & AI:</strong> TensorFlow, Scikit-learn, Transformers, OpenCV, BERT, Deep Learning</li>
-    <li><strong>NLP:</strong> Sentiment Analysis, Text Summarization, RAG, Reinforcement Learning</li>
-    <li><strong>BI/PM:</strong> Stakeholder comms, SOPs, Agile, JIRA, Git, GitHub</li>
-  </ul>
-</section>
-
-<section id="experience" style="display:none">
-  <h2>Professional Experience</h2>
-  <h3>Data Scientist – Comnatix LLC (Sep 2024 – Present)</h3>
-  <ul>
-    <li>Built AI-powered financial PDF extractor using Python, PyPDF2, AWS Bedrock</li>
-    <li>Converted unstructured documents to structured JSON stored in SQLite</li>
-    <li>Automated document workflows to improve operational efficiency</li>
-  </ul>
-
-  <h3>Data Scientist – NJIT (Nov 2022 – May 2024)</h3>
-  <ul>
-    <li>Improved university ranking predictions using ML (Random Forest, PCA)</li>
-    <li>Built dashboards using MicroStrategy and Plotly for leadership insights</li>
-    <li>Applied NLP (SpaCy, NLTK) for summarization and survey analysis</li>
-  </ul>
-
-  <h3>Data Scientist – Larsen & Toubro Infotech (Dec 2019 – Jul 2022)</h3>
-  <ul>
-    <li>Built ETL pipelines and automated SQL + Python report generation</li>
-    <li>Created predictive models and Power BI dashboards</li>
-    <li>Developed SOPs, Bash scripts, and managed SLAs & user access</li>
-  </ul>
-</section>
-
-<section id="education" style="display:none">
-  <h2>Education</h2>
-  <ul>
-    <li><strong>MS in Data Science</strong> – NJIT, USA (Sep 2022 – May 2024)</li>
-    <li><strong>PG Diploma in Data Science</strong> – IIIT Bangalore, India (Jan 2021 – Feb 2022)</li>
-  </ul>
-</section>
-
-<script>
-  function showSection(sectionId) {
-    const sections = ['summary', 'skills', 'experience', 'education'];
-    sections.forEach(id => {
-      document.getElementById(id).style.display = id === sectionId ? 'block' : 'none';
-    });
-  }
-</script>
-
 </body>
 </html>
