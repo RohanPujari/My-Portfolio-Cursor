@@ -1,51 +1,137 @@
-# My Portfolio
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohan Pujari | Data Scientist Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #232f3e;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
 
-## About Me
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1rem 0;
+    }
 
-I'm a Data Scientist with a passion for woring with data to solve problems.
+    nav a {
+      color: #232f3e;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-## Projects
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
 
-### Project 1
-**Data Analysis of Customer Churn**
+    h2 {
+      color: #0073bb;
+    }
 
-Built a machine learning model to predict customer churn for a telecommunications company. Used Python, pandas, and scikit-learn to analyze customer data and identify key factors leading to churn.
+    ul {
+      padding-left: 1.5rem;
+    }
 
-Key achievements:
-- Achieved 85% accuracy in predicting customer churn
-- Identified top 3 factors contributing to customer departures
-- Created interactive visualizations using Plotly
-- Provided actionable recommendations that reduced churn by 12%
+    .contact a {
+      color: #0073bb;
+    }
+  </style>
+</head>
+<body>
 
-[View Project](https://github.com/username/churn-analysis)
+<header>
+  <h1>Rohan Pujari</h1>
+  <p>Data Scientist | NLP | ML | MLOps</p>
+  <div class="contact">
+    <p><a href="mailto:rohanpujari1001@gmail.com">rohanpujari1001@gmail.com</a> |
+    <a href="https://www.linkedin.com/in/rohanpujari/">LinkedIn</a> |
+    <a href="https://github.com/RohanPujari">GitHub</a></p>
+  </div>
+</header>
 
-### Project 2
+<nav>
+  <a onclick="showSection('summary')">Summary</a>
+  <a onclick="showSection('skills')">Skills</a>
+  <a onclick="showSection('experience')">Experience</a>
+  <a onclick="showSection('education')">Education</a>
+</nav>
 
-**Sentiment Analysis Dashboard**
+<section id="summary">
+  <h2>Summary</h2>
+  <p>Data Science professional with 5+ years of experience in machine learning, predictive analytics, and NLP. Skilled in delivering actionable insights using Python, Random Forest, K-NN, Conv3D, and advanced text analysis. Proficient in real-time data visualization with Power BI and MicroStrategy, contributing to improved institutional rankings and operational strategy.</p>
+</section>
 
-Developed a real-time sentiment analysis dashboard for social media data. Utilized Natural Language Processing techniques and built a web interface to display results.
+<section id="skills" style="display:none">
+  <h2>Technical Skills</h2>
+  <ul>
+    <li><strong>Programming:</strong> Python, SQL, R</li>
+    <li><strong>Cloud:</strong> AWS (S3, IAM, Glue, Bedrock), Azure, GCP, Snowflake</li>
+    <li><strong>Big Data:</strong> Spark, Kafka, Hadoop</li>
+    <li><strong>Visualization:</strong> Tableau, Power BI, Excel, Streamlit, MicroStrategy</li>
+    <li><strong>ML & AI:</strong> TensorFlow, Scikit-learn, Transformers, OpenCV, BERT, Deep Learning</li>
+    <li><strong>NLP:</strong> Sentiment Analysis, Text Summarization, RAG, Reinforcement Learning</li>
+    <li><strong>BI/PM:</strong> Stakeholder comms, SOPs, Agile, JIRA, Git, GitHub</li>
+  </ul>
+</section>
 
-Key achievements:
-- Processed over 100,000 tweets in real-time
-- Built pipeline using Twitter API, Python, and Flask
-- Created interactive dashboard using Dash
-- Deployed solution on AWS cloud
+<section id="experience" style="display:none">
+  <h2>Professional Experience</h2>
+  <h3>Data Scientist – Comnatix LLC (Sep 2024 – Present)</h3>
+  <ul>
+    <li>Built AI-powered financial PDF extractor using Python, PyPDF2, AWS Bedrock</li>
+    <li>Converted unstructured documents to structured JSON stored in SQLite</li>
+    <li>Automated document workflows to improve operational efficiency</li>
+  </ul>
 
-[View Project](https://github.com/username/sentiment-dashboard)
+  <h3>Data Scientist – NJIT (Nov 2022 – May 2024)</h3>
+  <ul>
+    <li>Improved university ranking predictions using ML (Random Forest, PCA)</li>
+    <li>Built dashboards using MicroStrategy and Plotly for leadership insights</li>
+    <li>Applied NLP (SpaCy, NLTK) for summarization and survey analysis</li>
+  </ul>
 
-### Project 3
+  <h3>Data Scientist – Larsen & Toubro Infotech (Dec 2019 – Jul 2022)</h3>
+  <ul>
+    <li>Built ETL pipelines and automated SQL + Python report generation</li>
+    <li>Created predictive models and Power BI dashboards</li>
+    <li>Developed SOPs, Bash scripts, and managed SLAs & user access</li>
+  </ul>
+</section>
 
-**Sales Forecasting Model**
+<section id="education" style="display:none">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>MS in Data Science</strong> – NJIT, USA (Sep 2022 – May 2024)</li>
+    <li><strong>PG Diploma in Data Science</strong> – IIIT Bangalore, India (Jan 2021 – Feb 2022)</li>
+  </ul>
+</section>
 
-Created time series forecasting models to predict future sales for a retail chain. Implemented various forecasting techniques including ARIMA and Prophet.
+<script>
+  function showSection(sectionId) {
+    const sections = ['summary', 'skills', 'experience', 'education'];
+    sections.forEach(id => {
+      document.getElementById(id).style.display = id === sectionId ? 'block' : 'none';
+    });
+  }
+</script>
 
-Key achievements:
-- Reduced forecast error by 25% compared to existing methods
-- Automated reporting process saving 10 hours per week
-- Integrated model with existing BI tools
-- Created interactive Streamlit app for stakeholders
-
-[View Project](https://github.com/username/sales-forecast)
-
-
-
+</body>
+</html>
