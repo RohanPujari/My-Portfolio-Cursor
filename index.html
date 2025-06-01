@@ -4,34 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rohan Pujari | Data Scientist</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       font-family: 'Inter', sans-serif;
     }
 
     body {
-      background: linear-gradient(to bottom right, #0a0a0a, #440044, #ff007f);
+      background: linear-gradient(to right, #000000, #330033, #ff007f);
       color: #fff;
-      scroll-behavior: smooth;
-      transition: background 0.3s, color 0.3s;
+      overflow-x: hidden;
     }
 
     header {
-      padding: 1.5rem 2rem;
       text-align: center;
-      background: rgba(0, 0, 0, 0.85);
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.9);
       color: #ff4ec4;
+      font-size: 2.5rem;
+      font-weight: bold;
     }
 
     .hero {
@@ -39,7 +34,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 90vh;
+      height: 100vh;
       text-align: center;
       padding: 2rem;
     }
@@ -53,23 +48,22 @@
     }
 
     .hero h2 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
+      font-size: 3rem;
       color: #ff4ec4;
-      min-height: 3.5rem;
+      margin-bottom: 1rem;
     }
 
     .hero p {
       font-size: 1.2rem;
       max-width: 600px;
-      color: #eee;
+      color: #ddd;
     }
 
     section {
       padding: 3rem 2rem;
-      max-width: 900px;
+      max-width: 960px;
       margin: auto;
+      line-height: 1.8;
       opacity: 0;
       transform: translateY(40px);
       transition: opacity 0.8s ease, transform 0.8s ease;
@@ -81,19 +75,17 @@
     }
 
     h3 {
-      font-size: 2.2rem;
-      margin-bottom: 1.2rem;
+      font-size: 2rem;
       color: #ff4ec4;
+      margin-bottom: 1rem;
     }
 
-    ul li, section p {
+    ul li {
       margin-bottom: 1rem;
-      font-size: 1.05rem;
-      line-height: 1.6;
     }
 
     .tech-icons {
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
 
     .tech-icons i {
@@ -109,12 +101,32 @@
       color: #ccc;
       font-size: 0.9rem;
     }
+
+    .contact {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .resume-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #ff4ec4;
+      color: #fff;
+      background-color: transparent;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .resume-button:hover {
+      background-color: #ff4ec4;
+      color: #000;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Rohan Pujari</h1>
-  </header>
+  <header>Rohan Pujari</header>
 
   <section class="hero">
     <img src="20231011_104605.jpg" alt="Rohan Pujari">
@@ -124,54 +136,52 @@
 
   <section>
     <h3>Summary</h3>
-    <p>Data Science professional with 5+ years of experience specializing in machine learning, predictive analytics, and classification tasks. Proficient in Python and algorithms like Random Forest, K-NN, and Conv3D to deliver actionable insights and enhance decision-making. Skilled in NLP for sentiment analysis and text summarization, turning unstructured data into valuable intelligence. Experienced in building dynamic dashboards and visualizations with Power BI and MicroStrategy for real-time insights. Proven success in educational data analysis, contributing to improved institutional rankings and strategic positioning.</p>
+    <p>Data Science professional with 5+ years of experience specializing in machine learning, predictive analytics, and classification tasks... [REMAINING SUMMARY]</p>
   </section>
 
   <section>
     <h3>Technical Skills</h3>
     <ul>
-      <li><strong>Programming Languages:</strong> Python, SQL, R</li>
-      <li><strong>Cloud Platforms:</strong> Microsoft Azure, AWS (S3, IAM, Glue, Bedrock, Crawler), GCP, Snowflake</li>
-      <li><strong>Big Data Technologies:</strong> Apache Spark, Kafka, Hadoop</li>
-      <li><strong>Data Visualization Tools:</strong> Tableau, Power BI, Microsoft Excel, Streamlit, MicroStrategy</li>
-      <li><strong>Data Modeling & Manipulation:</strong> Dimensional modeling, schema design, data cleaning, transformation, data preprocessing</li>
-      <li><strong>Statistical Analysis:</strong> Data mining, predictive analytics, A/B testing, hypothesis testing</li>
-      <li><strong>AI/ML:</strong> TensorFlow, Scikit-learn, Transformers, OpenCV, BERT, Deep Learning, NLP, RAG, Reinforcement Learning</li>
-      <li><strong>Business Intelligence:</strong> Requirement gathering, stakeholder communication, reporting, SOPs, cross-functional communication</li>
-      <li><strong>Project Management:</strong> Agile methodologies, project planning, execution</li>
-      <li><strong>Collaboration Tools:</strong> JIRA, Service Now, Microsoft Teams, Git, GitHub</li>
+      <li><strong>Languages:</strong> Python, SQL, R</li>
+      <li><strong>Cloud:</strong> Azure, AWS, GCP, Snowflake</li>
+      <li><strong>Visualization:</strong> Power BI, Tableau, MicroStrategy</li>
+      <li><strong>ML/NLP:</strong> TensorFlow, Scikit-learn, Transformers, BERT</li>
     </ul>
+    <div class="tech-icons">
+      <i class="fab fa-python"></i>
+      <i class="fas fa-database"></i>
+      <i class="fab fa-aws"></i>
+      <i class="fab fa-google"></i>
+      <i class="fab fa-r-project"></i>
+      <i class="fas fa-brain"></i>
+      <i class="fas fa-chart-bar"></i>
+    </div>
   </section>
 
   <section>
     <h3>Professional Experience</h3>
-    <p><strong>Data Scientist, Comnatix LLC (Sept 2024 – Present | NC, USA)</strong><br>
-    • Engineered an AI-powered system using Python, PyPDF2, and NLP techniques to extract and process key financial data from complex PDF documents. Improved data accessibility and accuracy.<br>
-    • Implemented an automated pipeline to transform unstructured text into structured JSON format, storing and managing extracted data efficiently in SQLite.<br>
-    • Leveraged AWS Bedrock (Claude-v2 & Llama 3.1) and Boto3 for advanced text processing, tokenization, and summarization.<br>
-    • Integrated cloud-based automation to optimize workflows and ensure compliance with financial data standards.</p>
+    <p><strong>Data Scientist, Comnatix LLC</strong> – Built AI-driven pipelines, document automation, AWS Bedrock integration.</p>
+    <p><strong>Data Scientist, NJIT</strong> – University ranking models, NLP-based analysis, dashboarding.</p>
+    <p><strong>Data Scientist, L&T Infotech</strong> – ETL automation, NLP on customer feedback, Power BI dashboards.</p>
+  </section>
 
-    <p><strong>Data Scientist, NJIT (Nov 2022 – May 2024 | Newark, USA)</strong><br>
-    • Developed ML models using Scikit-learn & TensorFlow to analyze datasets from QS News, US News, and IPEDS, improving prediction of university rankings.<br>
-    • Automated data workflows with Pandas, NumPy, and SQL, reducing manual effort by 30%.<br>
-    • Built dashboards with MicroStrategy and Python to provide real-time analytics.<br>
-    • Applied NLP with NLTK and SpaCy for sentiment analysis, summarization, and visualizations.<br>
-    • Used supervised learning (Random Forest, k-NN, Decision Trees) for institutional classification.<br>
-    • Applied PCA on NSF R&D datasets, contributing to improved R1 research standing.</p>
-
-    <p><strong>Data Scientist, Larsen & Toubro Infotech (Dec 2019 – July 2022 | Hyderabad, India)</strong><br>
-    • Designed and optimized ETL pipelines from multiple data sources.<br>
-    • Developed predictive models using Random Forest, Logistic Regression.<br>
-    • Applied NLP (NLTK, SpaCy) for sentiment analysis on customer feedback.<br>
-    • Automated reporting with SQL and Python, reducing manual effort by 60%.<br>
-    • Created Power BI dashboards and Linux scripts for server performance.<br>
-    • Managed system migrations, SLA compliance, and deployments.</p>
+  <section>
+    <h3>Academic Projects</h3>
+    <p>[Add your project titles and summaries here]</p>
   </section>
 
   <section>
     <h3>Education</h3>
-    <p><strong>Master of Science, Data Science</strong><br>New Jersey Institute of Technology, Sept 2022 – May 2024</p>
-    <p><strong>Post-Graduate Diploma, Data Science</strong><br>International Institute of Information Technology, Jan 2021 – Feb 2022</p>
+    <p><strong>M.S. in Data Science</strong>, NJIT, USA</p>
+    <p><strong>PG Diploma in Data Science</strong>, IIIT Bangalore, India</p>
+  </section>
+
+  <section class="contact">
+    <h3>Contact</h3>
+    <p>Email: rohanpujari1914@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/rohanpujari/" style="color:#ff4ec4;">linkedin.com/in/rohanpujari</a></p>
+    <p>GitHub: <a href="https://github.com/RohanPujari" style="color:#ff4ec4;">github.com/RohanPujari</a></p>
+    <a class="resume-button" href="Rohan_Pujari_Resume.pdf" target="_blank">Download Resume</a>
   </section>
 
   <div class="footer">
@@ -179,16 +189,6 @@
   </div>
 
   <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('section').forEach(sec => observer.observe(sec));
-
     const text = 'Data Scientist & ML Engineer';
     let i = 0;
     function typeWriter() {
@@ -199,6 +199,16 @@
       }
     }
     typeWriter();
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(sec => observer.observe(sec));
   </script>
 </body>
 </html>
