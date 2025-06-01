@@ -68,7 +68,7 @@
 
     section {
       padding: 3rem 2rem;
-      max-width: 900px;
+      max-width: 1100px;
       margin: auto;
       opacity: 0;
       transform: translateY(40px);
@@ -92,13 +92,42 @@
       line-height: 1.6;
     }
 
-    .tech-icons {
-      margin-top: 1rem;
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 2rem;
     }
 
-    .tech-icons i {
-      font-size: 2rem;
-      margin: 0.5rem;
+    .skills-column {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 10px;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .skills-column h4 {
+      margin-bottom: 1rem;
+      color: #7f9cf5;
+    }
+
+    .skills-column ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skills-column li {
+      margin: 0.5rem 0;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .skills-column li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
       color: #ff4ec4;
     }
 
@@ -139,10 +168,9 @@
     • Explored deep learning models such as CNNs and RNNs, and understood their applications in image and sequence data<br>
     • Developed strong analytical skills by working on real-world datasets and use cases across various domains<br>
     • Realized the critical importance of data preprocessing, exploratory analysis, and feature engineering in successful model building<br>
-    • Built hands-on experience through multiple academic projects, both individually and in teams, applying data science techniques from end to end
+    • Built hands-on experience through multiple academic projects, both individually and in teams, applying data science techniques from end to end</p>
 
-
-      <p><strong>Bachelor of Technology Electronics and Communication Engineering</strong><br>
+    <p><strong>Bachelor of Technology Electronics and Communication Engineering</strong><br>
     Jawaharlal Nehru Technological University Hyderabad, India<br>
     <em>August 2017 - August 2021 | GPA: 3.5</em><br>
     • Received academic scholarship for outstanding performance<br>
@@ -152,10 +180,77 @@
     • Collaborated with cross-functional stakeholders to optimize workflows and enhance team productivity</p>
   </section>
 
-
   <section>
     <h3>Academic Projects</h3>
     <p>[Add your project titles and summaries here]</p>
+  </section>
+
+  <section>
+    <h3>Skills & Technologies</h3>
+    <div class="skills-grid">
+      <div class="skills-column">
+        <h4>Programming & ML</h4>
+        <ul>
+          <li>Python</li>
+          <li>R</li>
+          <li>SQL</li>
+          <li>TensorFlow</li>
+          <li>PyTorch</li>
+          <li>Scikit-Learn</li>
+        </ul>
+      </div>
+      <div class="skills-column">
+        <h4>Data Engineering</h4>
+        <ul>
+          <li>Apache Airflow</li>
+          <li>Snowflake</li>
+          <li>Databricks</li>
+          <li>Apache Spark</li>
+          <li>Hadoop</li>
+          <li>ETL Pipelines</li>
+        </ul>
+      </div>
+      <div class="skills-column">
+        <h4>Cloud & DevOps</h4>
+        <ul>
+          <li>AWS</li>
+          <li>Google Cloud</li>
+          <li>Azure</li>
+          <li>Docker</li>
+          <li>Kubernetes</li>
+          <li>CI/CD Pipelines</li>
+        </ul>
+      </div>
+      <div class="skills-column">
+        <h4>Data Analysis</h4>
+        <ul>
+          <li>Tableau</li>
+          <li>Power BI</li>
+          <li>A/B Testing</li>
+          <li>Statistical Analysis</li>
+          <li>Data Visualization</li>
+          <li>Time Series Analysis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Professional Experience</h3>
+    <p><strong>Data Scientist – Comnatix LLC (Sept 2024 – Present)</strong><br>
+    • Built an AI-powered pipeline for parsing financial PDFs using LangChain, Bedrock, and SageMaker<br>
+    • Automated S3-Lambda-SageMaker workflow to extract and summarize documents<br>
+    • Deployed scalable MLOps pipeline using Docker, Terraform, and CI/CD practices</p>
+
+    <p><strong>Data Scientist – NJIT (Nov 2022 – May 2024)</strong><br>
+    • Built ML models predicting academic rankings using US News, QS data<br>
+    • Created dashboards in MicroStrategy and Streamlit<br>
+    • Conducted sentiment analysis and topic modeling on university reviews</p>
+
+    <p><strong>Data Analyst – L&T Infotech (Dec 2019 – July 2022)</strong><br>
+    • Developed ETL pipelines and automated batch monitoring<br>
+    • Created Power BI dashboards and SQL-based reports<br>
+    • Used NLP for processing incident tickets and improving resolution time</p>
   </section>
 
   <div class="footer">
