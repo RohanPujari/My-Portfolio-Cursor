@@ -4,29 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rohan Pujari | Data Scientist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
       font-family: 'Inter', sans-serif;
     }
 
     body {
-      background: linear-gradient(to right, #000000, #330033, #ff007f);
+      background: linear-gradient(to bottom right, #0a0a0a, #440044, #ff007f);
       color: #fff;
-      overflow-x: hidden;
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
     }
 
     header {
+      padding: 1.5rem 2rem;
       text-align: center;
-      padding: 2rem;
-      background: rgba(0, 0, 0, 0.9);
-      color: #ff4ec4;
+      background: rgba(0, 0, 0, 0.85);
+    }
+
+    header h1 {
       font-size: 2.5rem;
-      font-weight: bold;
+      font-weight: 800;
+      color: #ff4ec4;
     }
 
     .hero {
@@ -34,7 +39,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      height: 90vh;
       text-align: center;
       padding: 2rem;
     }
@@ -48,22 +53,23 @@
     }
 
     .hero h2 {
-      font-size: 3rem;
-      color: #ff4ec4;
+      font-size: 2.8rem;
+      font-weight: 800;
       margin-bottom: 1rem;
+      color: #ff4ec4;
+      min-height: 3.5rem;
     }
 
     .hero p {
       font-size: 1.2rem;
       max-width: 600px;
-      color: #ddd;
+      color: #eee;
     }
 
     section {
       padding: 3rem 2rem;
-      max-width: 960px;
+      max-width: 900px;
       margin: auto;
-      line-height: 1.8;
       opacity: 0;
       transform: translateY(40px);
       transition: opacity 0.8s ease, transform 0.8s ease;
@@ -75,17 +81,19 @@
     }
 
     h3 {
-      font-size: 2rem;
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
       color: #ff4ec4;
-      margin-bottom: 1rem;
     }
 
-    ul li {
+    ul li, section p {
       margin-bottom: 1rem;
+      font-size: 1.05rem;
+      line-height: 1.6;
     }
 
     .tech-icons {
-      margin-top: 1.5rem;
+      margin-top: 1rem;
     }
 
     .tech-icons i {
@@ -101,87 +109,53 @@
       color: #ccc;
       font-size: 0.9rem;
     }
-
-    .contact {
-      text-align: center;
-      font-size: 1.1rem;
-    }
-
-    .resume-button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      border: 2px solid #ff4ec4;
-      color: #fff;
-      background-color: transparent;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .resume-button:hover {
-      background-color: #ff4ec4;
-      color: #000;
-    }
   </style>
 </head>
 <body>
-  <header>Rohan Pujari</header>
+  <header>
+    <h1>Rohan Pujari</h1>
+  </header>
 
   <section class="hero">
-    <img src="20231011_104605.jpg" alt="Rohan Pujari">
     <h2 id="typewriter"></h2>
-    <p>Solving real-world problems with machine learning, NLP, and cloud-first solutions.</p>
-  </section>
-
-  <section>
-    <h3>Summary</h3>
-    <p>Data Science professional with 5+ years of experience specializing in machine learning, predictive analytics, and classification tasks... [REMAINING SUMMARY]</p>
-  </section>
-
-  <section>
-    <h3>Technical Skills</h3>
-    <ul>
-      <li><strong>Languages:</strong> Python, SQL, R</li>
-      <li><strong>Cloud:</strong> Azure, AWS, GCP, Snowflake</li>
-      <li><strong>Visualization:</strong> Power BI, Tableau, MicroStrategy</li>
-      <li><strong>ML/NLP:</strong> TensorFlow, Scikit-learn, Transformers, BERT</li>
-    </ul>
-    <div class="tech-icons">
-      <i class="fab fa-python"></i>
-      <i class="fas fa-database"></i>
-      <i class="fab fa-aws"></i>
-      <i class="fab fa-google"></i>
-      <i class="fab fa-r-project"></i>
-      <i class="fas fa-brain"></i>
-      <i class="fas fa-chart-bar"></i>
-    </div>
-  </section>
-
-  <section>
-    <h3>Professional Experience</h3>
-    <p><strong>Data Scientist, Comnatix LLC</strong> – Built AI-driven pipelines, document automation, AWS Bedrock integration.</p>
-    <p><strong>Data Scientist, NJIT</strong> – University ranking models, NLP-based analysis, dashboarding.</p>
-    <p><strong>Data Scientist, L&T Infotech</strong> – ETL automation, NLP on customer feedback, Power BI dashboards.</p>
-  </section>
-
-  <section>
-    <h3>Academic Projects</h3>
-    <p>[Add your project titles and summaries here]</p>
+    <p>Hello, I'm Rohan Pujari, I'm a Data Scientist and Machine Learning Engineer.</p>
   </section>
 
   <section>
     <h3>Education</h3>
-    <p><strong>M.S. in Data Science</strong>, NJIT, USA</p>
-    <p><strong>PG Diploma in Data Science</strong>, IIIT Bangalore, India</p>
+    <p><strong>Master of Sciences in Data Science</strong><br>
+    New Jersey Institute of Technology (NJIT)<br>
+    <em>Graduated: May 2024 | GPA: 3.75</em><br>
+    • Specialized in advanced analytics, machine learning, NLP and data engineering<br>
+    • Focused on developing scalable solutions for real-world data challenges<br>
+    • Applied AI/ML techniques to solve complex business problems<br>
+    • Gained hands-on experience in building interactive dashboards for data visualization and reporting<br>
+    <strong>Coursework:</strong> Big Data, Machine Learning, Deep Learning, Web System Development, Data Visualization, Data Analysis for Managers, Applied Statistics, Natural Language Processing</p>
+
+    <p><strong>Post Graduation Diploma In Data Science</strong><br>
+    International Institute of Information Technology - Bangalore(IIIT-B), India<br>
+    <em>January 2021 - February 2022 | GPA: 3.5</em><br>
+    • Gained in-depth understanding and practical intuition of core machine learning algorithms including regression, classification, and clustering<br>
+    • Explored deep learning models such as CNNs and RNNs, and understood their applications in image and sequence data<br>
+    • Developed strong analytical skills by working on real-world datasets and use cases across various domains<br>
+    • Realized the critical importance of data preprocessing, exploratory analysis, and feature engineering in successful model building<br>
+    • Built hands-on experience through multiple academic projects, both individually and in teams, applying data science techniques from end to end
+
+
+      <p><strong>Bachelor of Technology Electronics and Communication Engineering</strong><br>
+    Jawaharlal Nehru Technological University Hyderabad, India<br>
+    <em>August 2017 - August 2021 | GPA: 3.5</em><br>
+    • Received academic scholarship for outstanding performance<br>
+    • Sports Coordinator, Hero Challenge Fest (Jan-Feb 2018)<br>
+    • Sports Representative Head, Banyan League (Jan-Feb 2019)<br>
+    • Managed logistics for multiple teams, overseeing transportation, deliveries, inventory, and supply chain processes<br>
+    • Collaborated with cross-functional stakeholders to optimize workflows and enhance team productivity</p>
   </section>
 
-  <section class="contact">
-    <h3>Contact</h3>
-    <p>Email: rohanpujari1914@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/rohanpujari/" style="color:#ff4ec4;">linkedin.com/in/rohanpujari</a></p>
-    <p>GitHub: <a href="https://github.com/RohanPujari" style="color:#ff4ec4;">github.com/RohanPujari</a></p>
-    <a class="resume-button" href="Rohan_Pujari_Resume.pdf" target="_blank">Download Resume</a>
+
+  <section>
+    <h3>Academic Projects</h3>
+    <p>[Add your project titles and summaries here]</p>
   </section>
 
   <div class="footer">
@@ -189,6 +163,16 @@
   </div>
 
   <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+
     const text = 'Data Scientist & ML Engineer';
     let i = 0;
     function typeWriter() {
@@ -199,16 +183,6 @@
       }
     }
     typeWriter();
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('section').forEach(sec => observer.observe(sec));
   </script>
 </body>
 </html>
