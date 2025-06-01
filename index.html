@@ -68,7 +68,7 @@
 
     section {
       padding: 3rem 2rem;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
       opacity: 0;
       transform: translateY(40px);
@@ -93,10 +93,9 @@
     }
 
     .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
       margin-top: 2rem;
     }
 
@@ -104,8 +103,6 @@
       background-color: rgba(255, 255, 255, 0.05);
       padding: 1.5rem;
       border-radius: 10px;
-      flex: 1;
-      min-width: 250px;
     }
 
     .skills-column h4 {
@@ -131,6 +128,34 @@
       color: #ff4ec4;
     }
 
+    .edu-grid {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .edu-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 10px;
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .edu-card .gpa {
+      color: #00ff88;
+      font-weight: bold;
+    }
+
+    .tags span {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      margin: 0.2rem;
+      display: inline-block;
+      font-size: 0.85rem;
+    }
+
     .footer {
       text-align: center;
       padding: 2rem;
@@ -148,58 +173,6 @@
   <section class="hero">
     <h2 id="typewriter"></h2>
     <p>Hello, I'm Rohan Pujari, I'm a Data Scientist and Machine Learning Engineer.</p>
-  </section>
-
-
-
-  <section>
-    <h3>Education</h3>
-    <div class="edu-grid">
-      <div class="edu-card">
-        <h4>Master of Sciences in Data Science</h4>
-        <a href="#">New Jersey Institute of Technology (NJIT)</a><br>
-        Graduated: May 2024 <span class="gpa">GPA: 3.75</span>
-        <ul>
-          <li>Specialized in advanced analytics, machine learning, NLP and data engineering</li>
-          <li>Focused on developing scalable solutions for real-world data challenges</li>
-          <li>Applied AI/ML techniques to solve complex business problems</li>
-          <li>Gained hands-on experience in building interactive dashboards for data visualization and reporting</li>
-        </ul>
-        <strong>Relevant Coursework:</strong>
-        <div class="tags">
-          <span>Big Data</span><span>Machine Learning</span><span>Deep Learning</span><span>Web System Development</span>
-          <span>Data Visualization</span><span>Data Analysis for Managers</span><span>Applied Statistics</span><span>Natural Language Processing</span>
-        </div>
-      </div>
-      <div class="edu-card">
-        <h4>Bachelor of Technology in Mechanical Engineering</h4>
-        <a href="#">BML Munjal University, New Delhi, India</a><br>
-        August 2017 - August 2021 <span class="gpa">GPA: 3.5</span>
-        <ul>
-          <li> Gained in-depth understanding and practical intuition of core machine learning algorithms including regression, classification, and clustering</li>
-          <li>Explored deep learning models such as CNNs and RNNs, and understood their applications in image and sequence data</li>
-          <li>Developed strong analytical skills by working on real-world datasets and use cases across various domains</li>
-          <li>Realized the critical importance of data preprocessing, exploratory analysis, and feature engineering in successful model building</li>
-          <li>Built hands-on experience through multiple academic projects, both individually and in teams, applying data science techniques from end-to-end</li>
-        </ul>
-      </div>
-    </div>
-
-
-
-    <!-- <p><strong>Bachelor of Technology Electronics and Communication Engineering</strong><br>
-    Jawaharlal Nehru Technological University Hyderabad, India<br>
-    <em>August 2017 - August 2021 | GPA: 3.5</em><br>
-    • Received academic scholarship for outstanding performance<br>
-    • Sports Coordinator, Hero Challenge Fest (Jan-Feb 2018)<br>
-    • Sports Representative Head, Banyan League (Jan-Feb 2019)<br>
-    • Managed logistics for multiple teams, overseeing transportation, deliveries, inventory, and supply chain processes<br>
-    • Collaborated with cross-functional stakeholders to optimize workflows and enhance team productivity</p> -->
-  </section>
-
-  <section>
-    <h3>Academic Projects</h3>
-    <p>[Add your project titles and summaries here]</p>
   </section>
 
   <section>
@@ -253,47 +226,86 @@
   </section>
 
   <section>
+    <h3>Education</h3>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <h4>Master of Sciences in Data Science</h4>
+        <a href="#">New Jersey Institute of Technology (NJIT)</a><br>
+        Graduated: May 2024 <span class="gpa">GPA: 3.75</span>
+        <ul>
+          <li>Specialized in advanced analytics, machine learning, NLP and data engineering</li>
+          <li>Focused on developing scalable solutions for real-world data challenges</li>
+          <li>Applied AI/ML techniques to solve complex business problems</li>
+          <li>Gained hands-on experience in building interactive dashboards for data visualization and reporting</li>
+        </ul>
+        <strong>Relevant Coursework:</strong>
+        <div class="tags">
+          <span>Big Data</span><span>Machine Learning</span><span>Deep Learning</span><span>Web System Development</span>
+          <span>Data Visualization</span><span>Data Analysis for Managers</span><span>Applied Statistics</span><span>Natural Language Processing</span>
+        </div>
+      </div>
+      <div class="edu-card">
+        <h4>Bachelor of Technology in Mechanical Engineering</h4>
+        <a href="#">BML Munjal University, New Delhi, India</a><br>
+        August 2017 - August 2021 <span class="gpa">GPA: 3.5</span>
+        <ul>
+          <li>Gained in-depth understanding and practical intuition of core machine learning algorithms including regression, classification, and clustering</li>
+          <li>Explored deep learning models such as CNNs and RNNs, and understood their applications in image and sequence data</li>
+          <li>Developed strong analytical skills by working on real-world datasets and use cases across various domains</li>
+          <li>Realized the critical importance of data preprocessing, exploratory analysis, and feature engineering in successful model building</li>
+          <li>Built hands-on experience through multiple academic projects, both individually and in teams, applying data science techniques from end-to-end</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Academic Projects</h3>
+    <p>[Add your project titles and summaries here]</p>
+  </section>
+
+  <section>
     <h3>Professional Experience</h3>
     <p><strong>Data Scientist – Comnatix LLC (Sept 2024 – Present)</strong><br>
-● Engineered an AI-powered system using Python, PyPDF2, and NLP techniques to extract and process key financial data from
-complex PDF documents, improving data accessibility and accuracy.<br>
-● Implemented an automated pipeline to transform unstructured text into structured JSON format, storing and managing extracted
-data efficiently in an SQLite database for streamlined analysis.<br>
-● Leveraged AWS Bedrock (Claude-v2 & Llama 3.1) and Boto3 for advanced text processing, tokenization, and summarization,
-enhancing the precision and scalability of financial data extraction.<br>
-● Optimized document processing workflows, integrating cloud-based automation to reduce manual effort, improve operational
-efficiency, and ensure compliance with financial data standards</p>
+        Engineered an AI-powered system using Python, PyPDF2, and NLP techniques to extract and process key financial data from
+        complex PDF documents, improving data accessibility and accuracy.<br>
+        Implemented an automated pipeline to transform unstructured text into structured JSON format, storing and managing extracted
+        data efficiently in an SQLite database for streamlined analysis.<br>
+        Leveraged AWS Bedrock (Claude-v2 & Llama 3.1) and Boto3 for advanced text processing, tokenization, and summarization,
+        enhancing the precision and scalability of financial data extraction.<br>
+        Optimized document processing workflows, integrating cloud-based automation to reduce manual effort, improve operational
+        efficiency, and ensure compliance with financial data standards</p>
+        
 
     <p><strong>Data Scientist – NJIT (Nov 2022 – May 2024)</strong><br>
-● Developed and deployed machine learning models using Python, Scikit-learn & TensorFlow to preprocess and analyze large-scale
-datasets from QS News, US News, and IPEDS, improving the predictive accuracy of university rankings and research output.<br>
-● Automated data processing workflows using Pandas, NumPy, and SQL, reducing manual efforts by 30% and enhancing efficiency
-in handling complex educational datasets.<br>
-● Designed and implemented an interactive dashboard with MicroStrategy, Python, and Plotly, integrating machine learning models
-to provide real-time insights and predictive analytics for university leadership.<br>
-● Enhanced NLP models using NLTK and SpaCy to analyze unstructured data from surveys and academic papers, producing
-sentiment analysis, text summarization, and word cloud visualizations to bolster institutional reputation.<br>
-● Employed supervised learning techniques such as Random Forest, K-Nearest Neighbors (k-NN), and Decision Trees to classify
-colleges based on doctoral degree conferral data and faculty counts (IPEDS 2019–20, Fall 2020), enhancing institutional analytics.<br>
-● Developed a research classification model to categorize institutions into R1, R2, and R3 research activity levels, supporting
-strategic initiatives to improve the university’s research standing.<br>
-● Applied Principal Component Analysis (PCA) on NSF fiscal year 2020 research and development datasets, uncovering critical
-insights that contributed to the university’s improved R1 ranking and strategic decision-making.</p>
+        Developed and deployed machine learning models using Python, Scikit-learn & TensorFlow to preprocess and analyze large-scale
+        datasets from QS News, US News, and IPEDS, improving the predictive accuracy of university rankings and research output.<br>
+        Automated data processing workflows using Pandas, NumPy, and SQL, reducing manual efforts by 30% and enhancing efficiency
+        in handling complex educational datasets.<br>
+        Designed and implemented an interactive dashboard with MicroStrategy, Python, and Plotly, integrating machine learning models
+        to provide real-time insights and predictive analytics for university leadership.<br>
+        Enhanced NLP models using NLTK and SpaCy to analyze unstructured data from surveys and academic papers, producing
+        sentiment analysis, text summarization, and word cloud visualizations to bolster institutional reputation.<br>
+        Employed supervised learning techniques such as Random Forest, K-Nearest Neighbors (k-NN), and Decision Trees to classify
+        colleges based on doctoral degree conferral data and faculty counts (IPEDS 2019–20, Fall 2020), enhancing institutional analytics.<br>
+        Developed a research classification model to categorize institutions into R1, R2, and R3 research activity levels, supporting
+        strategic initiatives to improve the university’s research standing.<br>
+        Applied Principal Component Analysis (PCA) on NSF fiscal year 2020 research and development datasets, uncovering critical
+        insights that contributed to the university’s improved R1 ranking and strategic decision-making.</p>
 
     <p><strong>Data Scientist – L&T Infotech (Dec 2019 – July 2022)</strong><br>
-● Designed and optimized a high-performance data pipeline to extract, transform, and load (ETL) data from multiple sources,
-improving data accessibility and analytics capabilities.<br>
-● Developed predictive models using Machine Learning (Random Forest, Logistic Regression) in Python (scikit-learn, Pandas,
-NumPy) to identify patterns and enhance decision-making.<br>
-● Applied Natural Language Processing (NLP) techniques with NLTK and SpaCy to analyze text data, extract key insights, and
-perform sentiment analysis on customer feedback.<br>
-● Automated data ingestion and report generation using SQL (MS SQL Server, MySQL) and Python scripts, reducing manual effort
-by 60% and accelerating data processing.<br>
-● Designed interactive Power BI dashboards and Excel reports to deliver actionable insights while implementing Linux (Bash, Shell)
-scripts for server monitoring and performance optimization, ensuring system reliability and reduced downtime.<br>
-● Developed SOPs for system migration and automation while managing user permissions, SLA compliance, and deployments to
-ensure seamless operations and security.</p>
-
+        Designed and optimized a high-performance data pipeline to extract, transform, and load (ETL) data from multiple sources,
+        improving data accessibility and analytics capabilities.<br>
+        Developed predictive models using Machine Learning (Random Forest, Logistic Regression) in Python (scikit-learn, Pandas,
+        NumPy) to identify patterns and enhance decision-making.<br>
+        Applied Natural Language Processing (NLP) techniques with NLTK and SpaCy to analyze text data, extract key insights, and
+        perform sentiment analysis on customer feedback.<br>
+        Automated data ingestion and report generation using SQL (MS SQL Server, MySQL) and Python scripts, reducing manual effort
+        by 60% and accelerating data processing.<br>
+        Designed interactive Power BI dashboards and Excel reports to deliver actionable insights while implementing Linux (Bash, Shell)
+        scripts for server monitoring and performance optimization, ensuring system reliability and reduced downtime.<br>
+        Developed SOPs for system migration and automation while managing user permissions, SLA compliance, and deployments to
+        ensure seamless operations and security.</p>        
   </section>
 
   <div class="footer">
