@@ -14,26 +14,26 @@
       padding: 0;
       font-family: 'Inter', sans-serif;
     }
-
+  
     body {
-  background: linear-gradient(to bottom right, #0d0d0d, #1a0023, #44004d);
-  color: #fff;
-  scroll-behavior: smooth;
-  transition: background 0.3s, color 0.3s;
-}
-
+      background: linear-gradient(to bottom right, #0d0d0d, #1a0023, #44004d);
+      color: #fff;
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
+  
     header {
       padding: 1.5rem 2rem;
       text-align: center;
       background: rgba(0, 0, 0, 0.85);
     }
-
+  
     header h1 {
       font-size: 2.5rem;
       font-weight: 800;
       color: #ff4ec4;
     }
-
+  
     .hero {
       display: flex;
       flex-direction: column;
@@ -43,7 +43,7 @@
       text-align: center;
       padding: 2rem;
     }
-
+  
     .hero img {
       width: 180px;
       height: 180px;
@@ -51,7 +51,7 @@
       border: 4px solid #fff;
       margin-bottom: 1.5rem;
     }
-
+  
     .hero h2 {
       font-size: 2.8rem;
       font-weight: 800;
@@ -59,13 +59,45 @@
       color: #ff4ec4;
       min-height: 3.5rem;
     }
-
+  
     .hero p {
       font-size: 1.2rem;
       max-width: 600px;
       color: #eee;
     }
-
+  
+    .hero .badges {
+      margin: 1.2rem 0;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      font-size: 1rem;
+      color: #ccc;
+      flex-wrap: wrap;
+    }
+  
+    .hero .badges i {
+      margin-right: 0.5rem;
+      color: #ff4ec4;
+    }
+  
+    .cta-button {
+      background: #ff4ec4;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+      margin-top: 1rem;
+    }
+  
+    .cta-button:hover {
+      background: #e600a0;
+    }
+  
     section {
       padding: 3rem 2rem;
       max-width: 1200px;
@@ -74,66 +106,66 @@
       transform: translateY(40px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
-
+  
     section.visible {
       opacity: 1;
       transform: translateY(0);
     }
-
+  
     h3 {
       font-size: 2.2rem;
       margin-bottom: 1.2rem;
       color: #ff4ec4;
     }
-
+  
     ul li, section p {
       margin-bottom: 1rem;
       font-size: 1.05rem;
       line-height: 1.6;
     }
-
+  
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
       margin-top: 2rem;
     }
-
+  
     .skills-column {
       background-color: rgba(255, 255, 255, 0.05);
       padding: 1.5rem;
       border-radius: 10px;
     }
-
+  
     .skills-column h4 {
       margin-bottom: 1rem;
       color: #7f9cf5;
     }
-
+  
     .skills-column ul {
       list-style: none;
       padding-left: 0;
     }
-
+  
     .skills-column li {
       margin: 0.5rem 0;
       position: relative;
       padding-left: 1.5rem;
     }
-
+  
     .skills-column li::before {
       content: '•';
       position: absolute;
       left: 0;
       color: #ff4ec4;
     }
-
+  
     .edu-grid {
       display: flex;
       gap: 2rem;
       flex-wrap: wrap;
     }
-
+  
     .edu-card {
       background-color: rgba(255, 255, 255, 0.05);
       padding: 1.5rem;
@@ -141,12 +173,12 @@
       flex: 1;
       min-width: 300px;
     }
-
+  
     .edu-card .gpa {
       color: #00ff88;
       font-weight: bold;
     }
-
+  
     .tags span {
       background: rgba(255, 255, 255, 0.1);
       padding: 0.4rem 0.8rem;
@@ -155,7 +187,7 @@
       display: inline-block;
       font-size: 0.85rem;
     }
-
+  
     .footer {
       text-align: center;
       padding: 2rem;
@@ -164,21 +196,35 @@
       font-size: 0.9rem;
     }
   </style>
+  
 </head>
 <body>
   <header>
     <h1>Rohan Pujari</h1>
   </header>
 
-  <section class="hero">
+  <!-- <section class="hero">
     <h2 id="typewriter"></h2>
     <p>Hello, I'm Rohan Pujari, I'm a Data Scientist and Machine Learning Engineer.</p>
+  </section> -->
+
+
+  <section class="hero">
+    <img src="your-profile.jpg" alt="Rohan Pujari Profile Picture" />
+    <h2 id="typewriter"></h2>
+    <p>Data Scientist | ML Engineer | Data Storyteller</p>
+    <div class="badges">
+      <span><i class="fas fa-map-marker-alt"></i> New Jersey, USA</span>
+      <span><i class="fas fa-xclock"></i> Open to Work</span>
+    </div>
+    <a href="#contact" class="cta-button">Let's Connect</a>
   </section>
+
 
   <section>
     <h3>About Me</h3>
     <p>
-      I'm Rohan Pujari, a passionate Data Scientist with a strong foundation in machine learning, statistical modeling, and cloud-native solutions. I thrive at the intersection of data and impact—building intelligent systems that solve real-world problems.
+      I'm Rohan Pujari, a passionate Data Scientist with a strong foundation in machine learning, statistical modeling, and cloud-native solutions. I thrive at the intersection of data and impact building intelligent systems that solve real-world problems.
       With experience across industry and academia, I’ve engineered end-to-end pipelines, conducted research-driven analysis, and led scalable solutions in fast-paced environments.
       Outside work, I enjoy exploring visual storytelling, sports, and mentoring aspiring data professionals.
     </p>
@@ -240,7 +286,7 @@
     <div class="edu-grid">
       <div class="edu-card">
         <h4>Master of Sciences in Data Science</h4>
-        <a>New Jersey Institute of Technology (NJIT)</a><br>
+        <a href="#"><span class="highlight">New Jersey Institute of Technology (NJIT)</span></a><br>
         Graduated: May 2024 <span class="gpa">GPA: 3.75</span>
         <ul>
           <li>Specialized in advanced analytics, machine learning, NLP and data engineering</li>
@@ -256,7 +302,7 @@
       </div>
       <div class="edu-card">
         <h4>Post Graduation Diploma in Data Science</h4>
-        <a href="#">International Institute of Information Technology, Bangalore, India</a><br>
+        <a href="#"><span class="highlight">International Institute of Information Technology, Bangalore, India</span></a><br>
         January 2021 - February 2022 <span class="gpa">GPA: 3.2</span>
         <ul>
           <li>Gained in-depth understanding and practical intuition of core machine learning algorithms including regression, classification, and clustering</li>
@@ -317,6 +363,37 @@
         Developed SOPs for system migration and automation while managing user permissions, SLA compliance, and deployments to
         ensure seamless operations and security.</p>        
   </section>
+
+  <section id="contact">
+    <h3 style="text-align:center; font-size:2.2rem; color:#cc66ff;">Get in Touch</h3>
+    <p style="text-align:center; margin-bottom:2rem; color:#ccc;">Interested in collaborating or have a project in mind? I'd love to hear from you.</p>
+  
+    <form action="https://formspree.io/f/moqglzqz" method="POST" style="max-width:700px; margin:auto; background:#1b1b2f; padding:2rem; border-radius:10px;">
+      <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+        <input type="text" name="name" placeholder="Your name" required style="flex:1; padding:1rem; border-radius:8px; border:none; background:#2d2d44; color:white;">
+        <input type="email" name="email" placeholder="your@email.com" required style="flex:1; padding:1rem; border-radius:8px; border:none; background:#2d2d44; color:white;">
+      </div>
+      <input type="text" name="subject" placeholder="What's this about?" required style="width:100%; margin-top:1rem; padding:1rem; border-radius:8px; border:none; background:#2d2d44; color:white;">
+      <textarea name="message" rows="6" placeholder="Your message here..." required style="width:100%; margin-top:1rem; padding:1rem; border-radius:8px; border:none; background:#2d2d44; color:white;"></textarea>
+      <button type="submit" style="margin-top:1rem; background:linear-gradient(to right, #ff007f, #cc66ff); color:white; padding:0.8rem 2rem; border:none; border-radius:8px; font-weight:bold;">Send Message</button>
+    </form>
+  </section>
+
+
+  <form action="https://formsubmit.co/rohanpujari1914@gmail.com@example.com" method="POST"> 
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+    <form action="https://formsubmit.co/your-email@example.com" method="POST">
+        <input type="text" name="name" required placeholder="Your Name">
+        <input type="email" name="email" required placeholder="Your Email">
+        <input type="text" name="subject" required placeholder="Subject">
+        <textarea name="message" rows="5" required placeholder="Message"></textarea>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+        <button type="submit">Send Message</button>
+      </form>
+    </form>
+      
 
   <div class="footer">
     &copy; 2025 Rohan Pujari. All Rights Reserved.
