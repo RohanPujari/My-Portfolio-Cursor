@@ -185,61 +185,47 @@
       color: #ccc;
       font-size: 0.9rem;
     }
-    .experience-section {
-        padding: 3rem 1rem;
-        text-align: center;
+    .tile-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
       }
       
-      .experience-section h2 {
-        font-size: 2.5rem;
+      .tile {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+      
+      .tile:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 30px rgba(255, 78, 196, 0.2);
+      }
+      
+      .tile-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #ff4ec4;
         margin-bottom: 0.3rem;
       }
       
-      .section-subtitle {
-        font-size: 1rem;
-        color: gray;
-        margin-bottom: 2rem;
-      }
-      
-      .experience-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
-      }
-      
-      .experience-card {
-        background: #fff;
-        max-width: 320px;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        padding: 1.5rem;
-        text-align: left;
-      }
-      
-      .exp-date {
-        font-size: 0.9rem;
-        color: #999;
-        margin-bottom: 0.5rem;
-        display: block;
-      }
-      
-      .exp-role {
-        font-size: 1.1rem;
-        font-weight: 700;
-        margin-bottom: 0.8rem;
-      }
-      
-      .exp-role span {
-        color: #555;
-        font-weight: 500;
-      }
-      
-      .exp-details {
-        padding-left: 1rem;
-        list-style: disc;
-        color: #333;
+      .tile-subtitle {
         font-size: 0.95rem;
-        line-height: 1.5rem;
+        color: #aaa;
+        margin-bottom: 1rem;
+      }
+      
+      .tile ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+      }
+      
+      .tile ul li {
+        margin-bottom: 0.75rem;
+        line-height: 1.5;
       }
       
