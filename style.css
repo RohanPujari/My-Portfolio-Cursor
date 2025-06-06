@@ -250,4 +250,49 @@
     margin-bottom: 0.75rem;
     line-height: 1.5;
   }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .project-tile {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 78, 196, 0.1);
+    position: relative;
+  }
+  
+  .project-tile:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 30px rgba(255, 78, 196, 0.2);
+  }
+  
+  .project-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff4ec4;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-subtitle {
+    color: #aaa;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-tile ul {
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    color: #ddd;
+  }
+  
+  .project-tile ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
   
