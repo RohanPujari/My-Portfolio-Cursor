@@ -295,4 +295,47 @@
     margin-bottom: 0.5rem;
     line-height: 1.6;
   }
-  
+  .project-tile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .project-tile {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-tile:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 30px rgba(255, 78, 196, 0.2);
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff4ec4;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-subtitle {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+  }
+
+  .project-tile ul {
+    padding-left: 1.5rem;
+    color: #ddd;
+    font-size: 1rem;
+  }
+
+  .project-tile ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }  
