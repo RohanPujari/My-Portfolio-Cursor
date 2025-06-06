@@ -186,76 +186,66 @@
     font-size: 0.9rem;
   }
   
-  .experience-row {
+  .experience-grid {
     display: flex;
+    gap: 2rem;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 2rem;
     margin-top: 2rem;
   }
   
-  .work-tile {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.05);
+  .experience-tile {
+    flex: 1 1 calc(33% - 2rem);
+    background-color: rgba(255, 255, 255, 0.04);
     border-radius: 12px;
-    flex: 1 1 30%;
-    min-width: 300px;
     padding: 2rem;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 6px 20px rgba(255, 78, 196, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-image: var(--logo);
+    min-width: 300px;
+    position: relative;
+    background-image: var(--logo-url);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 75%;
+    background-size: 70%;
     background-blend-mode: overlay;
+    box-shadow: 0 4px 20px rgba(255, 78, 196, 0.08);
+    transition: transform 0.3s ease;
   }
   
-  .work-tile:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(255, 78, 196, 0.2);
-  }
-  
-  .work-tile::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.75); /* dark overlay for readability */
-    z-index: 0;
-    border-radius: 12px;
+  .experience-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 78, 196, 0.2);
   }
   
   .tile-content {
     position: relative;
     z-index: 1;
+    backdrop-filter: blur(2px);
   }
   
-  .work-tile h4 {
-    font-size: 1.3rem;
+  .experience-tile h4 {
     color: #ff4ec4;
-    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
   }
   
-  .work-tile h4 span {
+  .experience-tile h4 span {
     color: #aaa;
     font-weight: normal;
   }
   
-  .tile-subtitle {
-    font-size: 0.95rem;
+  .timeline-date {
+    font-size: 0.9rem;
     color: #bbb;
     margin-bottom: 1rem;
   }
   
-  .work-tile ul {
-    list-style-type: disc;
-    padding-left: 1.2rem;
+  .experience-tile ul {
+    list-style: disc;
+    padding-left: 1.4rem;
     color: #eee;
   }
   
-  .work-tile ul li {
-    margin-bottom: 0.7rem;
+  .experience-tile ul li {
+    margin-bottom: 0.75rem;
     line-height: 1.5;
   }
   
