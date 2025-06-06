@@ -221,15 +221,6 @@
     margin-bottom: 0.4rem;
   }
   
-  .tile-logo {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    margin-bottom: 1rem;
-    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.2));
-    align-self: center;
-  }
-
   .tile-subtitle {
     font-size: 1rem;
     color: #bbb;
@@ -248,6 +239,7 @@
     margin-bottom: 0.75rem;
     line-height: 1.6;
   }
+  
 
   .tile-with-bg {
     background-repeat: no-repeat;
