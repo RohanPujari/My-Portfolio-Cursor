@@ -186,128 +186,42 @@
     font-size: 0.9rem;
   }
   
-  .tile-grid {
+  .experience-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2rem;
     margin-top: 2rem;
   }
   
-  .tile {
-    background: linear-gradient(to bottom right, #1f0027, #2a003f);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 14px;
+  .work-tile {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    flex: 1 1 30%;
+    min-width: 300px;
     padding: 2rem;
-    width: 100%;
-    max-width: 360px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 6px 20px rgba(255, 78, 196, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-  }
-  
-  .tile:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 40px rgba(255, 78, 196, 0.25);
-  }
-  
-  .tile-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #ff4ec4;
-    margin-bottom: 0.4rem;
-  }
-  
-  .tile-subtitle {
-    font-size: 1rem;
-    color: #bbb;
-    margin-bottom: 1.2rem;
-    font-style: italic;
-  }
-  
-  .tile ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    color: #ddd;
-    margin-top: 0.5rem;
-  }
-  
-  .tile ul li {
-    margin-bottom: 0.75rem;
-    line-height: 1.6;
-  }
-  
-
-  .tile-with-bg {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60%;
-    background-blend-mode: overlay;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .tile-with-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(13, 13, 13, 0.85); /* Matches your dark theme */
-    z-index: 0;
-  }
-  
-  .tile-content {
-    position: relative;
-    z-index: 1;
-  }
-
-  .logo-bg {
-    position: relative;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.02); /* optional subtle base */
-  }
-  
-  .logo-bg::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-image: var(--logo-url);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70%;
-    opacity: 0.06;
-    z-index: 0;
-  }
-  
-  .logo-bg * {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .tile-with-logo {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.02);
-    background-image: url('comnatix_cover.png');
+    background-image: var(--logo);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 75%;
-    padding: 2rem;
-    margin: 2rem auto;
-    border-radius: 12px;
-    max-width: 800px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-blend-mode: overlay;
   }
   
-  .tile-with-logo::before {
+  .work-tile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(255, 78, 196, 0.2);
+  }
+  
+  .work-tile::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* dark overlay */
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); /* dark overlay for readability */
     z-index: 0;
     border-radius: 12px;
   }
@@ -315,11 +229,33 @@
   .tile-content {
     position: relative;
     z-index: 1;
-    color: #fff;
   }
   
-  .tile-content ul {
-    list-style: disc;
+  .work-tile h4 {
+    font-size: 1.3rem;
+    color: #ff4ec4;
+    margin-bottom: 0.5rem;
+  }
+  
+  .work-tile h4 span {
+    color: #aaa;
+    font-weight: normal;
+  }
+  
+  .tile-subtitle {
+    font-size: 0.95rem;
+    color: #bbb;
+    margin-bottom: 1rem;
+  }
+  
+  .work-tile ul {
+    list-style-type: disc;
     padding-left: 1.2rem;
+    color: #eee;
+  }
+  
+  .work-tile ul li {
+    margin-bottom: 0.7rem;
+    line-height: 1.5;
   }
   
