@@ -195,30 +195,32 @@
   }
   
   .experience-tile {
-    flex: 1 1 calc(33% - 2rem);
+    flex: 1 1 calc(33.3% - 2rem);
     background-color: rgba(255, 255, 255, 0.04);
     border-radius: 12px;
     padding: 2rem;
-    min-width: 300px;
-    position: relative;
-    background-image: var(--logo-url);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70%;
-    background-blend-mode: overlay;
     box-shadow: 0 4px 20px rgba(255, 78, 196, 0.08);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
   }
   
   .experience-tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(255, 78, 196, 0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(255, 78, 196, 0.15);
+  }
+  
+  .tile-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1rem;
   }
   
   .tile-content {
-    position: relative;
-    z-index: 1;
-    backdrop-filter: blur(2px);
+    text-align: center;
   }
   
   .experience-tile h4 {
@@ -240,8 +242,8 @@
   
   .experience-tile ul {
     list-style: disc;
-    padding-left: 1.4rem;
-    color: #eee;
+    padding-left: 1.2rem;
+    text-align: left;
   }
   
   .experience-tile ul li {
