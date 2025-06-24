@@ -1,45 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rohan Pujari | Data Scientist</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rohan Pujari • Portfolio</title>
+  <link rel="icon" type="image/png" href="E:\Resume\My Portfolio Cursor\Myimage.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rohan Pujari | Data Scientist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <div class="animated-background"></div>
 <body>
-  <header style="background: linear-gradient(135deg, #1a0023, #44004d); padding: 0; overflow: hidden; position: relative; height: 100vh;">
-    <div style="
-      background-image: url('research-machine-learning.jpg');
-      background-size: cover;
-      background-position: center;
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;">
-    </div>
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 0;"></div>
-    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; text-align: center; padding: 2rem; position: relative; z-index: 1;">
-      <img src="Myimage.jpg" alt="Rohan Pujari Profile Picture" style="width: 160px; height: 160px; border-radius: 50%; border: 3px solid #fff; margin-bottom: 1.5rem;">
-      <h1 style="font-size: 3rem; font-weight: 800; color: #ff4ec4; margin-bottom: 0.5rem;">Rohan Pujari</h1>
-      <h2 style="font-size: 1.8rem; font-weight: 500; color: #ddd;">Data Scientist | ML Engineer | Data Storyteller | Automobile Enthusiast | Kaggle Contributor</h2>
-      <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; color: #ccc;">
-        <span><i class="fas fa-map-marker-alt"></i> New Jersey, USA</span>
-        <span><i class="fas fa-briefcase"></i> Open to Work</span>
+  <div id="particles-js"></div>
+    <main class="container">
+      <section class="hero">
+        <div class="scrolling-greet">Hi, I'm Rohan Pujari and Welcome to my Portfolio</div>
+        <img src="Myimage.jpg" alt="Rohan Pujari Profile Picture" class="profile-pic" />
+        <h2 id="typewriter"></h2>
+        <p class="subtitle">Data Scientist | ML Engineer | Data Storyteller | Automobile Enthusiast | Kaggle Contributor</p>
+        
+        <div class="badges">
+          <span><i class="fas fa-map-marker-alt"></i> New Jersey, USA</span>
+          <span><i class="fas fa-briefcase"></i> Open to Work</span>
+        </div>
+      <!-- -------------------------------------------------------- -->
+      <!-- Animated Social Icons -->
+      <div id="SocialIcons" style="display: flex; justify-content: center; gap: 30px; margin: 40px 0;">
+  
+        <!-- LinkedIn -->
+        <div class="faq-icon-wrapper">
+          <a href="https://www.linkedin.com/in/rohanpujari/" target="_blank" class="faq-button" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            <span class="tooltip">LinkedIn</span>
+          </a>
+        </div>
+      
+        <!-- GitHub -->
+        <div class="faq-icon-wrapper">
+          <a href="https://github.com/RohanPujari" target="_blank" class="faq-button" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+            <span class="tooltip">GitHub</span>
+          </a>
+        </div>
+      
+        <!-- Email -->
+        <div class="faq-icon-wrapper">
+          <a href="mailto:rohanpujari1914@gmail.com" class="faq-button" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+            <span class="tooltip">Email</span>
+          </a>
+        </div>
+      
       </div>
-      <a href="#contact" class="cta-button" style="margin-top: 2rem;">Let's Connect</a>
-    </div>
-  </header>
+      
+
+      
+<!-- ---------------------------------------------------       -->
+    <br>
+    <a href="#contact" class="box-button">
+      <div class="button">
+        <span>Let's Connect</span>
+      </div>
+    </a>
+    </section>
+    
   
 
-  <!-- Core Sections (About, Skills, Education, Experience, Contact) inserted from prior HTML -->
-  <!-- You can copy your full, styled block content into this structure -->
-  
   <!-- Include your About Me section -->
   <section>
-    <h3>About Me</h3>
+    <h3 class="shiny-text">About Me</h3>
     <p>
       I'm Rohan Pujari, a passionate Data Scientist with a strong foundation in machine learning, statistical modeling, and cloud-native solutions. I thrive at the intersection of data and impact building intelligent systems that solve real-world problems.
       With experience across industry and academia, I’ve engineered end-to-end pipelines, conducted research-driven analysis, and led scalable solutions in fast-paced environments.
@@ -48,7 +79,7 @@
   </section>
   <!-- Include your Skills & Technologies section -->
   <section>
-    <h3>Skills & Technologies</h3>
+    <h3 class="shiny-text">Skills & Technologies</h3>
     <div class="skills-grid">
       <div class="skills-column">
         <h4>Programming & ML</h4>
@@ -99,17 +130,18 @@
   
   <!-- Include your Education section -->
   <section>
-    <h3>Education</h3>
+    <h3 class="shiny-text">Education</h3>
     <div class="edu-grid">
       <div class="edu-card">
         <h4>Master of Sciences in Data Science</h4>
-        <a href="#"><span class="highlight">New Jersey Institute of Technology (NJIT)</span></a><br>
-        Graduated: May 2024 <span class="gpa">GPA: 3.75</span>
+        <span style="color: #7f9cf5;" class="highlight-text">New Jersey Institute of Technology (NJIT)</span><br>
+        <span><i class="fas fa-calendar-alt"></i> September 2022 - May 2024</span><span class="gpa"> GPA: 3.75</span><br>
+        <br>
         <ul>
-          <li>Specialized in advanced analytics, machine learning, NLP and data engineering</li>
-          <li>Focused on developing scalable solutions for real-world data challenges</li>
-          <li>Applied AI/ML techniques to solve complex business problems</li>
-          <li>Gained hands-on experience in building interactive dashboards for data visualization and reporting</li>
+          <li>Developed strong foundations in machine learning, natural language processing, and data engineering, with hands-on projects simulating real-world challenges in business, education, and research.</li>
+          <li>Gained practical experience building interactive dashboards and automated data pipelines, working with both structured and unstructured data using tools like Python, SQL, Pandas, and Power BI.</li>
+          <li>Completed multiple course-based projects involving predictive modeling, text analytics, and data visualization, applying statistical concepts and ML algorithms to real datasets.</li>
+          <li>Participated in collaborative coursework involving data storytelling, ETL workflows, and decision-making under uncertainty, preparing for data-driven roles in industry.</li>
         </ul>
         <strong>Relevant Coursework:</strong>
         <div class="tags">
@@ -119,8 +151,9 @@
       </div>
       <div class="edu-card">
         <h4>Post Graduation Diploma in Data Science</h4>
-        <a href="#"><span class="highlight">International Institute of Information Technology, Bangalore, India</span></a><br>
-        January 2021 - February 2022 <span class="gpa">GPA: 3.2</span>
+        <span style="color: #7f9cf5;" class="highlight-text">International Institute of Information Technology (IIIT-B)</span><br>
+        <span><i class="fas fa-calendar-alt"></i> January 2021 - February 2022 <span class="gpa"> GPA: 3.2</span><br>
+        <br>
         <ul>
           <li>Gained in-depth understanding and practical intuition of core machine learning algorithms including regression, classification, and clustering</li>
           <li>Explored deep learning models such as CNNs and RNNs, and understood their applications in image and sequence data</li>
@@ -133,15 +166,20 @@
   </section>
 
 
+   <!-- <h3 style="text-align: center; color: #ff4ec4;">Work Experience</h3> -->
   <section id="experience">
-    <h3>Work Experience</h3>
+    <h3 class="shiny-text">Work Experience</h3>
     <div class="experience-grid">
-      
+
       <div class="experience-tile">
-        <img src="comnatix_cover.jpeg" alt="Comnatix Logo" class="tile-logo">
-        <div class="tile-content">
-          <h4>Data Scientist <span>@ Comnatix LLC</span></h4>
+        <div class="tile-header">
+          <img src="comnatix_cover.jpeg" alt="Comnatix Logo" class="tile-logo">
+         <h4 style ="color: #7f9cf5"><span class="job-title">Data Scientist</span> 
+          <span class="company">@ Comnatix LLC</span></h4>
           <p class="timeline-date">Sept 2024 – Present</p>
+        </div>
+        <div class="tile-details">
+         
           <ul>
             <li>Engineered an AI-powered system using Python, PyPDF2, and NLP techniques to extract and process key financial data from
               complex PDF documents, improving data accessibility and accuracy.</li>
@@ -153,13 +191,17 @@
               efficiency, and ensure compliance with financial data standards</li>
           </ul>
         </div>
-      </div>
+    </div>
   
+    
+    <!-- <div class="experience-grid"> -->
       <div class="experience-tile">
+      <div class="tile-header">
         <img src="NJITlogo.jpg" alt="NJIT Logo" class="tile-logo">
-        <div class="tile-content">
-          <h4>Data Scientist <span>@ NJIT</span></h4>
+        <h4 style ="color: #7f9cf5;"><span class="job-title">Data Scientist</span> <span class="company">@ New Jersey Institute of Technology</span></h4>
           <p class="timeline-date">Nov 2022 – May 2024</p>
+        </div>
+        <div class="tile-details">
           <ul>
             <li>Developed and deployed machine learning models using Python, Scikit-learn & TensorFlow to preprocess and analyze large-scale
               datasets from QS News, US News, and IPEDS, improving the predictive accuracy of university rankings and research output.</li>
@@ -178,14 +220,16 @@
           </ul>
         </div>
       </div>
-
-
+    
 
       <div class="experience-tile">
+        <div class="tile-header">
         <img src="LTI.webp" alt="LTI Logo" class="tile-logo">
-        <div class="tile-content">
-          <h4>Data Scientist <span>@ L&T Infotech</span></h4>
+          <h4 style ="color: #7f9cf5;"><span class="job-title">Data Scientist</span> <span class="company">@ Larsen and Toubro Infotech</span></h4>
+
           <p class="timeline-date">Dec 2019 – July 2022</p>
+        </div>
+        <div class="tile-details">
           <ul>
             <li>Designed and optimized a high-performance data pipeline to extract, transform, and load (ETL) data from multiple sources,
               improving data accessibility and analytics capabilities.</li>
@@ -202,71 +246,85 @@
           </ul>
         </div>
       </div>
-  
+    </div>
     </div>
   </section> 
+
+
   <!-- Include your Academic Projects section -->
+
+
    <section>
-    <h3>Academic Projects</h3>
-    <h3 style="text-align: center; color: #ff4ec4;">Projects</h3>
+    <h3 class="shiny-text">Academic Projects</h3>
+    <!-- <h3 style="text-align: center; color: #ff4ec4;">Projects</h3> -->
     <div class="project-tile-grid">
-  
-        <div class="project-title">PJ1</div>
-        <p class="project-subtitle">Short 1-line summary of the project goal.</p>
+      
+
+      <div class="project-tile">
+        <div class="project-title">Alcohol Craving Prediction & Intervention</div>
+        <p class="project-subtitle">Real‑time craving prediction using wearables and ML, triggering timely behavioral interventions.</p>
         <ul>
-          <li>Tech stack used: Python, NLP, AWS</li>
-          <li>Problem solved and approach taken</li>
-          <li>Impact or result achieved</li>
+          <li><strong>Tech stack:</strong> Python, pandas; ML models: Random Forest & LSTM; model interpretability: SHAP</li>
+    <li>Collected sensor data (heart rate, sleep, stress) paired with self-reported mood, engineered time-series features to predict alcohol craving episodes.</li>
+    <li>Built Random Forest and LSTM models achieving ~82% accuracy; used SHAP to interpret outputs and identify top risk factors like elevated heart rate and poor sleep</li>
+    <li> Developed an app that triggers personalized strategies (mindfulness, alerts, peer support, journaling, activity suggestions) when craving risk is high.</li>
+    <li>Proven impact in simulation: Demonstrated a potential 15% reduction in relapse rates and provided insights valuable for behavioral healthcare and further addiction analytics research.</li>
+        </ul>
+      </div>
+      
+  
+      <div class="project-tile">
+        <div class="project-title">Neural Networks Project – Gesture Recognition</div>
+        <p class="project-subtitle">Smart‑TV control via webcam‑based recognition of five hand gestures using neural network architectures.</p>
+        <ul>
+          <li>Tech stack: Python, OpenCV, TensorFlow/Keras; architectures: 3D Convolutional Network (Conv3D) and CNN + RNN (LSTM/GRU)</li>
+          <li>Built dataset of 2–3 s videos (30 frames) across five gestures (thumbs up/down, left/right swipe, stop); preprocessed frames for training</li>
+          <li>Implemented and compared two models: Conv3D (spatiotemporal video analysis) and CNN+RNN (frame‑wise feature extraction + sequence modeling)</li>
+          <li>Impact: Enabled real-time, remote‑free control of TV functions like volume and playback through gesture commands</li>
         </ul>
       </div>
   
       <div class="project-tile">
-        <div class="project-title">PJ2</div>
-        <p class="project-subtitle">Short 1-line summary of the project goal.</p>
+        <div class="project-title">Telecom Churn Prediction Case Study</div>
+        <p class="project-subtitle">Predictive modeling to identify high-risk telecom customers and uncover churn drivers.</p>
         <ul>
-          <li>Used Snowflake and Streamlit for insights</li>
-          <li>Built a complete ML pipeline</li>
-          <li>Improved automation and reduced manual work</li>
+          <li>Tech stack: Python, pandas, scikit-learn (with feature engineering, class-balancing techniques like oversampling/SMOTE)</li>
+          <li>Analyzed customer-level data from a leading telecom provider; focused on high-value customers (70th percentile of recharge amounts) </li>
+          <li>Engineered features, tagged churners based on zero usage criteria, removed churn-phase data; built classification models (e.g., Logistic Regression, Random Forest, XGBoost)</li>
+          <li>Identified top churn indicators such as drop in incoming calls and recharge patterns; recommended targeted retention strategies</li>
         </ul>
       </div>
   
       <div class="project-tile">
-        <div class="project-title">PJ3</div>
-        <p class="project-subtitle">Short 1-line summary of the project goal.</p>
+        <div class="project-title">Lead Scoring Case Study</div>
+        <p class="project-subtitle">Logistic‑regression‑based scoring to rank hot leads for an ed‑tech company and boost conversions.</p>
         <ul>
-          <li>LLM-based PDF summarization</li>
-          <li>Triggered workflows using AWS Lambda</li>
-          <li>Interactive Q&A via Bedrock</li>
+          <li>Tech stack: Python, pandas, scikit‑learn; focused on feature engineering, balancing classes, and model calibration</li>
+    <li>Dataset: ~9,000 leads from X Education with ~30% baseline conversion; goal was to raise to ~80% through prioritization</li>
+    <li>Built a logistic regression model to assign each lead a score (0–100); used train/test split, handled missing values and categorical encodings, tuned threshold for sensitivity/specificity</li>
+    <li>Outcome: ~80% accuracy, ~72% precision; key predictors included time spent on site, total visits, lead origin and occupation; recommended using top-scoring leads for sales outreach</li>
+        </ul>
+      </div>
+
+
+      <div class="project-tile">
+        <div class="project-title">Spotify Data ETL Pipeline with AWS</div>
+        <p class="project-subtitle">Automated pipeline to extract, transform & query Spotify playlist data using AWS.</p>
+        <ul>
+          <li>Tech stack: Python, Spotipy, AWS Lambda, S3, Glue, Athena (CloudWatch/EventBridge scheduling)</li>
+          <li>Built a serverless ETL workflow: fetched JSON data from Spotify API → stored raw data in S3 → triggered Lambda to transform it → cataloged via Glue → enabled SQL querying in Athena</li>
+          <li>Impact: Enabled automated, scalable music-data analysis—ideal for exploring trends in playlists (e.g. Top 50 India) and powering analytics dashboards</li>
         </ul>
       </div>
   
       <div class="project-tile">
-        <div class="project-title">PJ4</div>
-        <p class="project-subtitle">Short 1-line summary of the project goal.</p>
+        <div class="project-title">Bike Sharing Demand Analysis</div>
+        <p class="project-subtitle">Predicting daily bike-sharing demand using multiple linear regression.</p>
         <ul>
-          <li>Scraped institutional data from multiple websites</li>
-          <li>Stored data in Snowflake</li>
-          <li>Built dashboards with Power BI</li>
-        </ul>
-      </div>
-  
-      <div class="project-tile">
-        <div class="project-title">PJ5</div>
-        <p class="project-subtitle">Short 1-line summary of the project goal.</p>
-        <ul>
-          <li>Built time series forecasting model</li>
-          <li>Deployed with SageMaker & Streamlit</li>
-          <li>Used CI/CD pipelines and Docker</li>
-        </ul>
-      </div>
-  
-      <div class="project-tile">
-        <div class="project-title">PJ6</div>
-        <p class="project-subtitle">Short 1-line summary of the project goal.</p>
-        <ul>
-          <li>Multi-user document assistant using LangChain</li>
-          <li>S3 + Bedrock + DynamoDB + Lambda</li>
-          <li>Scalable SageMaker-based API</li>
+          <li><strong>Tech stack:</strong> Python, Jupyter Notebook, pandas, scikit‑learn; data prep and analysis in Excel/CSV formats.</li>
+    <li><strong>Dataset & goal:</strong> Analyzed a bike-sharing provider’s historical data to model demand variations; key focus on predicting usage based on date, weather, and seasonality.</li>
+    <li><strong>Modeling:</strong> Built multiple linear regression models to forecast daily bike rentals; engineered features like temperature, humidity, day-of-week, and seasonal trends.</li>
+    <li><strong>Impact:</strong> Identified significant demand drivers weather patterns, months, seasons to inform better bike allocation strategies and operational planning.</li>
         </ul>
       </div>
     </div>
@@ -276,24 +334,87 @@
   
   <!-- Include your Contact section -->
   <section id="contact">
-    <h3 style="text-align:center; font-size:2.2rem; color:#cc66ff;">Get in Touch</h3>
-    <p style="text-align:center; margin-bottom:2rem; color:#ccc;">Interested in collaborating or have a project in mind? I'd love to hear from you.</p>
+    <h3  class="shiny-text" style="text-align:center; font-size:2.2rem; color:#cc66ff;">Get in Touch</h3>
   
-    <form action="https://formspree.io/f/mblydkdj" method="POST" style="max-width:700px; margin:auto; background:#1b1b2f; padding:2rem; border-radius:10px;">
-      <div style="display:flex; gap:1rem; flex-wrap:wrap;">
-        <input type="text" name="name" placeholder="Your name" required style="flex:1; padding:1rem; border-radius:8px; border:none; background:#2d2d44; color:white;">
-        <input type="email" name="email" placeholder="your@email.com" required style="flex:1; padding:1rem; border-radius:8px; border:none; background:#2d2d44; color:white;">
+    <div class="card">
+      <div class="card2">
+        <form class="form" action="https://formspree.io/f/mblydkdj" method="POST">
+          <p id="heading">Let’s build what doesn’t exist yet!</p>
+    
+          <div class="field">
+            <svg class="input-icon" viewBox="0 0 16 16" fill="currentColor" height="16" width="16">
+              <path d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Z" />
+            </svg>
+            <input type="text" name="name" class="input-field" placeholder="Your Name" required>
+          </div>
+    
+          <div class="field">
+            <svg class="input-icon" viewBox="0 0 16 16" fill="currentColor" height="16" width="16">
+              <path d="M0 4a2 2 0 012-2h12a2 2 0 012 2v.586l-8 5-8-5V4zm0 2.697v5.803a2 2 0 002 2h12a2 2 0 002-2V6.697l-7.555 4.722a1 1 0 01-1.11 0L0 6.697z" />
+            </svg>
+            <input type="email" name="email" class="input-field" placeholder="Your Email" required>
+          </div>
+    
+          <div class="field">
+            <input type="text" name="subject" class="input-field" placeholder="Subject" required>
+          </div>
+    
+          <div class="field">
+            <textarea name="message" class="input-field" rows="4" placeholder="Your Message..." required></textarea>
+          </div>
+    
+          <div class="btn">
+            <button class="button1">
+              Send Message <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          
+        </form>
       </div>
-      <input type="text" name="subject" placeholder="What's this about?" required style="width:100%; margin-top:1rem; padding:1rem; border-radius:8px; border:none; background:#2d2d44; color:white;">
-      <textarea name="message" rows="6" placeholder="Your message here..." required style="width:100%; margin-top:1rem; padding:1rem; border-radius:8px; border:none; background:#2d2d44; color:white;"></textarea>
-      <button type="submit" style="margin-top:1rem; background:linear-gradient(to right, #ff007f, #cc66ff); color:white; padding:0.8rem 2rem; border:none; border-radius:8px; font-weight:bold;">Send Message</button>
-    </form>
+    </div>
+    
+
+      
   </section>
   
   <footer class="footer">
     &copy; 2025 Rohan Pujari. All Rights Reserved.
   </footer>
+</main>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 70, "density": { "enable": true, "value_area": 800 } },
+      "color": { "value": "#ffffff" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.05 },
+      "size": { "value": 2 },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.1,
+        "width": 1
+      },
+      "move": { "enable": true, "speed": 1.5 }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": { "enable": true, "mode": "grab" }
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "line_linked": { "opacity": 0.5 }
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
 
-  <script src="script.js"></script>
 </body>
 </html>

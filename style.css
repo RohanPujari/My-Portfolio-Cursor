@@ -24,6 +24,7 @@
     color: #ff4ec4;
   }
   
+  
   .hero {
     display: flex;
     flex-direction: column;
@@ -87,11 +88,62 @@
   .cta-button:hover {
     background: #e600a0;
   }
+
+/* --------------------------------------------- */
+
+  .box-button {
+    cursor: pointer;
+    border: 4px solid black;
+    /* background-color: #ff4ec4; */
+    
+    padding-bottom: 10px;
+    transition: 0.1s ease-in-out;
+    user-select: none;
+    text-decoration: none;
+    display: inline-block;
+  }
   
+  .button {
+    background-color: #dddddd;
+    border: 4px solid #fff;
+    padding: 3px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button span {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    color: black;
+  }
+  
+  .box-button:active {
+    padding: 0;
+    margin-bottom: 10px;
+    transform: translateY(10px);
+  }
+  
+  /* .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .social-icons a {
+    font-size: 1.4rem;
+    color: #7f9cf5;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #ff4ec4;
+  }
+   */
   section {
-    padding: 3rem 2rem;
-    max-width: 1200px;
-    margin: auto;
+    padding: 2rem 3rem;  /* Add side spacing */
+    width: 100%;         /* Full stretch */
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
@@ -185,32 +237,107 @@
     color: #ccc;
     font-size: 0.9rem;
   }
-  
-  .experience-grid {
-    display: flex;
+
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 2rem;
   }
   
+  .job-title {
+    color: #7f9cf5;
+    font-weight: 600;
+  }
+
   .experience-tile {
-    flex: 1 1 calc(33.3% - 2rem);
-    background-color: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 20px rgba(255, 78, 196, 0.08);
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 1rem;
+    position: relative;
+    max-height: 190px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 300px;
+  flex-direction: column;
   }
   
   .experience-tile:hover {
+    max-height: 500px;
+    overflow-y: auto; 
+    transition: all 0.5s ease;
+    box-shadow: 0 8px 30px rgba(255, 78, 196, 0.2);
     transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(255, 78, 196, 0.15);
+    cursor: pointer;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.08);
   }
+  
+  .tile-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .tile-header h4 {
+    color: #ff4ec4;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .job-title {
+    color: #7f9cf5 !important;
+    font-weight: 600;
+  }
+  
+  .company {
+    color: #7f9cf5 !important;
+  }
+  
+  .tile-header span {
+    color: #bbb;
+  }
+  .tile-header h4 {
+    color: #5379ee; /* New color for title */
+  }
+
+  .timeline-date {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  .tile-details {
+    /* margin-top: 1rem; */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 1rem;
+    padding-right: 0.5rem;
+    scroll-behavior: smooth;
+  }
+  
+  .experience-tile:hover .tile-details {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .tile-details ul {
+    padding-left: 1.2rem;
+    color: #eee;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-left: 1.2rem;
+    color: #eee;
+    font-size: 0.95rem;
+    line-height: 3.6;
+  }  
+
+
+--------------------------------------------
   
   .tile-logo {
     width: 80px;
@@ -224,10 +351,11 @@
   }
   
   .experience-tile h4 {
-    color: #ff4ec4;
+    color:#7f9cf5;
     font-size: 1.3rem;
     margin-bottom: 0.3rem;
   }
+  
   
   .experience-tile h4 span {
     color: #aaa;
@@ -297,9 +425,9 @@
   }
   .project-tile-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 1.5rem; /* Adjust spacing between tiles */
   }
 
   .project-tile {
@@ -338,4 +466,516 @@
   .project-tile ul li {
     margin-bottom: 0.5rem;
     line-height: 1.6;
+  }
+  .hero {
+    position: relative;
+    height: 100vh;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    /* background-image: url('istockphoto-1448152453-612x612.jpg'); Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
+
+  .hero * {
+    z-index: 1;
+    position: relative;
+  }
+
+  .scrolling-greet {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ff4ec4;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #ff4ec4;
+    width: fit-content;
+    margin: 0 auto 1rem;
+    animation: typing 3s steps(22, end), blink 0.6s step-end infinite alternate;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 22ch }
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin: 1.5rem auto;
+    object-fit: cover;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .badges {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(to right, #ff007f, #cc66ff);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s;
+  }
+
+  .cta-button:hover {
+    transform: scale(1.05);
   }  
+
+  .highlight-text {
+    color: #ff4ec4; 
+    font-weight: 600;
+  }
+
+  .shiny-text {
+    display: inline-block;
+    background-image: linear-gradient(
+    90deg,
+    #ff4ec4,
+    #00f5d4,
+    #7f9cf5,
+    #ff4ec4
+  );
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 8s linear infinite;
+    font-weight: 800;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100%  50%;
+    }
+  }
+
+  --------------------------------------------
+  .cta-button.shiny-text {
+    background: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border: 2px solid #ff4ec4;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    color: transparent;
+    background-image: linear-gradient(
+      to right,
+      #ffffff,
+      #ff4ec4,
+      #ffffff,
+      #7f9cf5,
+      #ffffff
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shine 3s linear infinite;
+    transition: background 0.8s ease, transform 0.2s;
+  }
+  
+  .cta-button.shiny-text:hover {
+    transform: scale(1.05);
+    border-color: #7f9cf5;
+  }
+  .connect-link {
+    color: #ff4ec4;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .connect-link:hover {
+    color: #7f9cf5;
+    text-decoration: underline;
+  }
+  .connect-link.shiny-text {
+    animation: none !important;
+    background: none !important;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+  }
+
+  /* Background Animation
+  .animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background-image: url('https://www.reactbits.dev/_next/static/media/squares.2fa62142.svg');
+    background-repeat: repeat;
+    opacity: 0.05;
+    animation: scroll-bg 40s linear infinite;
+    filter: hue-rotate(300deg) contrast(1.2); 
+     background-color: red;
+  }
+  
+  @keyframes scroll-bg {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 1000px 1000px;
+    }
+  } */
+
+  #particles-js,
+  .animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* make sure it's behind everything */
+    pointer-events: none; /* makes it invisible to clicks/interactions */
+  }
+  
+  section, .hero, .experience-grid, .project-tile-grid {
+  position: relative;
+  z-index: 1;
+  background: transparent; /* no need to override background color */
+}
+ 
+
+/* -====================== */
+
+.faq-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.faq-button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, #00f5d4 0%, #ff4ec4 74%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.faq-button i {
+  color: white;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-button:hover i {
+  animation: bounce 0.7s both;
+}
+
+/* Pulse animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+.tooltip {
+  position: absolute;
+  top: -28px;
+  opacity: 0;
+  background-image: linear-gradient(147deg, #00f5d4 0%, #ff4ec4 74%);
+  color: black;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #ff4ec4;
+  z-index: -1;
+}
+
+.faq-button:hover .tooltip {
+  top: -35px;
+  opacity: 1;
+}
+
+ /* -------------------------------------------------------- */
+ .glow-on-hover {
+  width: 140px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg,
+    #ff0000,
+    #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 2px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  border-radius: 10px;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+ /* -------------------------------------------------------- */
+ 
+ /* Button style from Uiverse.io by adeladel522 */  
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color:  #ff009d;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* --------------Forms------------------------------ */
+/* From Uiverse.io by yashasvi9199 */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 2em;
+  background-color: #171717;
+  border-radius: 25px;
+  transition: 0.4s ease-in-out;
+}
+
+.card {
+  background-image: linear-gradient(163deg, #ff4ec4 0%, #7f9cf5 100%);
+  border-radius: 22px;
+  transition: all 0.3s;
+  margin: auto;
+  max-width: 700px;
+}
+
+.card2 {
+  transition: all 0.2s;
+}
+
+.card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(255, 78, 196, 0.3);
+}
+
+#heading {
+  text-align: center;
+  margin-bottom: 0.5em;
+  color: rgb(210, 54, 163);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2em;
+  font-weight: 100;
+
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  border-radius: 10px;
+  padding: 0.6em;
+  background-color: #1f1f1f;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: white;
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #d3d3d3;
+  font-size: 1rem;
+  resize: none;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5em;
+}
+
+.button1 {
+  padding: 0.6em 1.5em;
+  font-size: 0.95rem;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right,
+      #7f9cf5,
+      #ff4ec4,
+      #00f5d4);
+  color: white;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  box-shadow: 0px 0px 12px rgba(255, 78, 196, 0.4);
+}
+
+.button1:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgba(255, 78, 196, 0.6);
+}
+
