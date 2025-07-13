@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const text = 'Data Scientist & ML Engineer';
+    const text = 'A Passionate Data Scientist & ML Engineer';
     let i = 0;
     function typeWriter() {
       if (i < text.length) {
@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
     typeWriter();
-  
+    
+    
     // Intersection Observer for fade-in animation
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {

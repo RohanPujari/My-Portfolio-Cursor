@@ -4,10 +4,324 @@
     padding: 0;
     font-family: 'Inter', sans-serif;
   }
+
+  /* ---------------------------- */
+
+  /* Add this to your CSS for Netflix-style intro animation and color adaptation */
+/* Add this to your CSS for Netflix-style intro animation and color adaptation */
+
+/* Netflix-style color variables */
+:root {
+  --netflix-black: #141414;
+  --netflix-dark-gray: #333333;
+  --netflix-gray: #e5e5e5;
+  --netflix-red: #e50914;
+  --netflix-white: #ffffff;
+  --netflix-red66: rgba(229, 9, 20, 0.4);  /* light glow */
+  --netflix-red99: rgba(229, 9, 20, 0.7);  /* stronger glow */
+  --spotlight-color: rgba(255, 0, 0, 0.5); /* red light, change to white if needed */
+}
+
+#typewriter {
+  /* font-family: monospace; */
+  font-size: 2.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--netflix-red); /* Blinking cursor */
+  width: fit-content;
+  animation: typing 5s steps(20, end), blink-caret 0.75s step-end infinite;
+  color: white;
+  margin: 20px auto;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 8ch;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--netflix-red);
+  }
+}
+
+
+/* @keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+} */
+
+#portfolio-content {
+  /* display: none; /* REMOVE OR COMMENT THIS OUT */ 
+  visibility: hidden; /* Start hidden */
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 0.5s ease 0.8s, visibility 0s linear 1.3s; /* Fade in over 0.5s, become visible after 0.8s, delay visibility change */
+  /* The 0.8s delay on opacity transition ensures it fades in AFTER the intro overlay slides away.
+     The 1.3s delay on visibility (0.8s + 0.5s) ensures it only becomes 'visible' to clicks AFTER it's fully opaque. */
+}
+
+/* */
+
+/* Show it when the class is added */
+
+/* Hide the welcome overlay when button is clicked */
+.hidden {
+  opacity: 0;
+  transform: translateY(-5000px);
+  pointer-events: none;
+}
+
+
+/* ----------------------------------------------------------- */
+
+body {
+  box-sizing: border-box; /* Good for all elements */
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif; /* Your preferred font */
+  background-color: var(--netflix-white); /*Overall background*/
+  color: var(--netflix-white);
+  scroll-behavior: smooth;
+  transition: background 0.3s, color 0.3s;
+}
+
+
+#intro-overlay {
+  position: fixed; /* Stays on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--netflix-black); /* Or #000, consistent with your design */
+  display: flex; /* Make it a flex container */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack children vertically if needed */
+  z-index: 9999; /* Ensure it's on top */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* For hiding it */
+}
+
+#intro-overlay.hidden {
+  opacity: 0;
+  pointer-events: none; /* Crucial to allow clicks on content below */
+  /* You might want a transform like translateY(-100%) or scale(0)
+     for a more visually distinct "hide" animation, e.g.: */
+  transform: translateY(-100vh); /* Slides up */
+  /* Or display: none after a delay if you want to completely remove it from flow */
+}
+
+/* The spotlight container itself (inside #intro-overlay) */
+.spotlight-container {
+  position: relative; /* Relative to #intro-overlay */
+  width: 100%;
+  height: 100%; /* Fill the overlay */
+  display: flex; /* Inherit centering from parent */
+  justify-content: center;
+  align-items: center;
+  /* No need for min-height: 100vh here as it's already in #intro-overlay */
+}
+
+/*
+ Keep .spotlight and .center-button styles largely as they are,
+ but ensure the .spotlight has `position: absolute;` and positions
+ itself relative to the .spotlight-container.
+*/
+
+.spotlight {
+  position: absolute;
+  top: 0; /* Starts at the top of spotlight-container */
+  left: 50%;
+  transform: translateX(-50%); /* Correctly centers horizontally */
+  width: 0;
+  height: 0;
+  background: radial-gradient(ellipse at top, rgba(173, 216, 230, 0.7) 0%, rgba(0, 0, 0, 0) 70%);
+  animation: shine-spotlight 2s forwards; /* Use a unique name! */
+  pointer-events: none;
+}
+
+@keyframes shine-spotlight { /* UNIQUE NAME FOR SPOTLIGHT */
+  from {
+      width: 0;
+      height: 0;
+      opacity: 0;
+  }
+  to {
+      width: 40%; /* TWEAK THIS */
+      height: 70%; /* TWEAK THIS */
+      opacity: 1;
+  }
+}
+
+
+@keyframes dropSpotlight {
+  0% {
+    top: -50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+  60% {
+    opacity: 0.4;
+    transform: translate(-50%, -30%) scale(1.05);
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.center-button {
+  position: relative;
+  z-index: 1;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(255, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+  opacity: 0;
+  animation: fadeInButton 2.5s forwards 1.5s;
+}
+
+.center-button:hover {
+  background-color: #b20710;
+}
+
+@keyframes fadeInButton {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* #portfolio-content {
+  /* Start fully hidden */
+  /* visibility: hidden; */
+  /* opacity: 0; */
+  /* transition: opacity 0.5s ease; Transition for fading in */
+  /* Do NOT use display: none here if you want transitions when 'show' is added.
+     Instead, ensure it's placed *below* the intro-overlay in the HTML. */
+/* } */
+
+#portfolio-content.show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  /* Optional: add a delay if you want it to appear after intro fades out */
+  transition-delay: 0.3s; /* Example delay */
+}
+
+
+@keyframes fadeInMain {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+/* ---------------------------------------------------------------- */
+
+/* 🎯 Button Container */
+#enter-wrapper {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeInButton 2s ease 3s forwards;
+  text-align: center;
+}
+
+/* Wrapper with glow */
+#enter-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+  /* animation: pulseGlow 2.5s ease-out infinite; */
+}
+
+
+
+
+/* Remove glow when hidden */
+#intro-overlay.hidden #enter-wrapper {
+  animation: none;
+}
+
+
+#welcome-heading::after {
+  /* content: '|'; */
+  animation: blink 1s infinite;
+  margin-left: 5px;
+  color: var(--netflix-red);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* #welcome-heading1 {
+  display: block !important;
+  color: white !important;
+  font-size: 2rem;
+  position: relative;
+  z-index: 999;
+} */
+
+
+/* Keep your existing portfolio-content and intro-overlay.hidden/show styles */
+/* #portfolio-content {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease ;
+} */
+
+/* #portfolio-content.show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+} */
+
+/* Existing fade-in-section styles */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  /* ---------------------------- */
   
   body {
-    background: linear-gradient(to bottom right, #0d0d0d, #1a0023, #44004d);
-    color: #fff;
+    background-color: var(--netflix-black);
+    color: var(--netflix-white);
     scroll-behavior: smooth;
     transition: background 0.3s, color 0.3s;
   }
@@ -15,13 +329,13 @@
   header {
     padding: 1.5rem 2rem;
     text-align: center;
-    background: rgba(0, 0, 0, 0.85);
+    background: white;
   }
   
   header h1 {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #ff4ec4;
+    color: var(--netflix-white);
   }
   
   
@@ -47,7 +361,7 @@
     font-size: 2.8rem;
     font-weight: 800;
     margin-bottom: 1rem;
-    color: #ff4ec4;
+    color: var(--netflix-white);
     min-height: 3.5rem;
   }
   
@@ -69,12 +383,12 @@
   
   .hero .badges i {
     margin-right: 0.5rem;
-    color: #ff4ec4;
+    color:var(--netflix-red);
   }
   
   .cta-button {
-    background: #ff4ec4;
-    color: #fff;
+    background:var(--netflix-red);
+    /* color: #fff; */
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 25px;
@@ -86,14 +400,14 @@
   }
   
   .cta-button:hover {
-    background: #e600a0;
+    background: var(--netflix-red);
   }
 
 /* --------------------------------------------- */
 
   .box-button {
     cursor: pointer;
-    border: 4px solid black;
+    /* border: 4px solid black; */
     /* background-color: #ff4ec4; */
     
     padding-bottom: 10px;
@@ -103,14 +417,14 @@
     display: inline-block;
   }
   
-  .button {
+  /* .button {
     background-color: #dddddd;
     border: 4px solid #fff;
-    padding: 3px 8px;
+    padding: 3px 8px; 
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+  } */
   
   .button span {
     font-size: 1.2em;
@@ -157,7 +471,7 @@
   h3 {
     font-size: 2.2rem;
     margin-bottom: 1.2rem;
-    color: #ff4ec4;
+    color: var(--netflix-white);
   }
   
   ul li, section p {
@@ -172,16 +486,27 @@
     gap: 1.5rem;
     margin-top: 2rem;
   }
+
+  .skills-column:hover {
+    max-height: 500px;
+    overflow-y: auto; 
+    transition: all 0.5s ease;
+    box-shadow: 0 8px 10px var(--netflix-red);
+    transform: translateY(-6px);
+    cursor: pointer;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.08);
+  }
   
   .skills-column {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 1.5rem;
     border-radius: 10px;
   }
-  
+  /* ==================================================================================== */
   .skills-column h4 {
     margin-bottom: 1rem;
-    color: #7f9cf5;
+    color: var(--netflix-red);
   }
   
   .skills-column ul {
@@ -199,7 +524,7 @@
     content: '•';
     position: absolute;
     left: 0;
-    color: #ff4ec4;
+    color: var(--netflix-red);
   }
   
   .edu-grid {
@@ -219,6 +544,17 @@
   .edu-card .gpa {
     color: #00ff88;
     font-weight: bold;
+  }
+
+  .edu-card:hover {
+    max-height: 500px;
+    overflow-y: auto; 
+    transition: all 0.5s ease;
+    box-shadow: 0 8px 20px var(--netflix-red);
+    transform: translateY(-6px);
+    cursor: pointer;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.08);
   }
   
   .tags span {
@@ -245,10 +581,6 @@
     gap: 2rem;
   }
   
-  .job-title {
-    color: #7f9cf5;
-    font-weight: 600;
-  }
 
   .experience-tile {
     background: rgba(255, 255, 255, 0.05);
@@ -267,7 +599,7 @@
     max-height: 500px;
     overflow-y: auto; 
     transition: all 0.5s ease;
-    box-shadow: 0 8px 30px rgba(255, 78, 196, 0.2);
+    box-shadow: 0 8px 20px var(--netflix-red);
     transform: translateY(-6px);
     cursor: pointer;
     z-index: 1000;
@@ -282,30 +614,28 @@
   }
   
   .tile-header h4 {
-    color: #ff4ec4;
+    color:var(--netflix-red);
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
   }
 
   .job-title {
-    color: #7f9cf5 !important;
+    color:var(--netflix-red) !important;
     font-weight: 600;
   }
   
   .company {
-    color: #7f9cf5 !important;
+    color:var(--netflix-red) !important;
   }
   
   .tile-header span {
-    color: #bbb;
+    color:var(--netflix-red);
   }
-  .tile-header h4 {
-    color: #5379ee; /* New color for title */
-  }
+
 
   .timeline-date {
     font-size: 0.9rem;
-    color: #aaa;
+    color: var(--netflix-gray);
   }
   
   .tile-details {
@@ -349,9 +679,9 @@
   .tile-content {
     text-align: center;
   }
-  
+/* ================================================================================================   */
   .experience-tile h4 {
-    color:#7f9cf5;
+    color: var(--netflix-white);
     font-size: 1.3rem;
     margin-bottom: 0.3rem;
   }
@@ -364,7 +694,7 @@
   
   .timeline-date {
     font-size: 0.9rem;
-    color: #bbb;
+    color: var(--netflix-gray);
     margin-bottom: 1rem;
   }
   
@@ -378,20 +708,17 @@
     margin-bottom: 0.75rem;
     line-height: 1.5;
   }
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
+
   
-  .project-tile {
-    background-color: rgba(255, 255, 255, 0.05);
+  /* .project-tile {
+    background-color: var(--netflix-dark-gray);
+    color: var(--netflix-white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 12px rgba(255, 78, 196, 0.1);
+    
     position: relative;
   }
   
@@ -403,12 +730,12 @@
   .project-header {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #ff4ec4;
+    color: var(--netflix-white);
     margin-bottom: 0.5rem;
   }
   
   .project-subtitle {
-    color: #aaa;
+    color: var(--netflix-gray);
     font-size: 0.95rem;
     margin-bottom: 1rem;
   }
@@ -422,7 +749,7 @@
   .project-tile ul li {
     margin-bottom: 0.5rem;
     line-height: 1.6;
-  }
+  } */
   .project-tile-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -436,24 +763,24 @@
     border-radius: 12px;
     padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(227, 7, 7, 0.1);
   }
 
   .project-tile:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 30px rgba(255, 78, 196, 0.2);
+    box-shadow: 0 8px 20px var(--netflix-red);
   }
 
   .project-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #ff4ec4;
+    color: var(--netflix-red);
     margin-bottom: 0.5rem;
   }
 
   .project-subtitle {
     font-size: 0.95rem;
-    color: #ccc;
+    color: var(--netflix-gray);
     margin-bottom: 1rem;
   }
 
@@ -482,14 +809,14 @@
     z-index: 1;
   }
 
-  .hero::before {
+  /* .hero::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
     height: 100%; width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 0;
-  }
+    /* background: rgba(0, 0, 0, 0.6); */
+    /* z-index: 0;
+  } */ 
 
   .hero * {
     z-index: 1;
@@ -497,20 +824,34 @@
   }
 
   .scrolling-greet {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     font-weight: 800;
-    color: #ff4ec4;
+    color: var(--netflix-red);
     overflow: hidden;
     white-space: nowrap;
-    border-right: 2px solid #ff4ec4;
+    border-right: 2px solid var(--netflix-red);
     width: fit-content;
     margin: 0 auto 1rem;
-    animation: typing 3s steps(22, end), blink 0.6s step-end infinite alternate;
+    animation: typing 3.5s steps(52, end), blink 1s step-end infinite alternate;
   }
+
+  /* .scrolling-greet1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--netflix-red);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--netflix-red);
+    width: fit-content;
+    margin: 0 auto 1rem;
+    animation: typing 3.5s steps(52, end), blink 1s step-end infinite alternate;
+  } */
+
+
 
   @keyframes typing {
     from { width: 0 }
-    to { width: 22ch }
+    to { width: 30ch }
   }
 
   @keyframes blink {
@@ -543,8 +884,9 @@
   .cta-button {
     display: inline-block;
     padding: 0.8rem 2rem;
-    background: linear-gradient(to right, #ff007f, #cc66ff);
+    /* background: linear-gradient(to right, #ff007f, #cc66ff); */
     color: white;
+    color: var(--netflix-white);
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
@@ -556,7 +898,7 @@
   }  
 
   .highlight-text {
-    color: #ff4ec4; 
+    color: var(--netflix-red); 
     font-weight: 600;
   }
 
@@ -564,12 +906,12 @@
     display: inline-block;
     background-image: linear-gradient(
     90deg,
-    #ff4ec4,
-    #00f5d4,
-    #7f9cf5,
-    #ff4ec4
+    var(--netflix-red),
+    var(--netflix-red99)
+    /* var(--netflix-red66) */
+   
   );
-    background-size: 400%;
+    background-size: 100%;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -592,17 +934,16 @@
     background: none;
     padding: 0.8rem 2rem;
     font-size: 1.1rem;
-    border: 2px solid #ff4ec4;
+    border: 2px solid var(--netflix-red);
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     color: transparent;
     background-image: linear-gradient(
       to right,
-      #ffffff,
-      #ff4ec4,
-      #ffffff,
-      #7f9cf5,
+      var(--netflix-white),
+      var(--netflix-red),
+      var(--netflix-white),
       #ffffff
     );
     background-clip: text;
@@ -613,10 +954,10 @@
   
   .cta-button.shiny-text:hover {
     transform: scale(1.05);
-    border-color: #7f9cf5;
+    border-color: yellow;
   }
   .connect-link {
-    color: #ff4ec4;
+    color: var(--netflix-red);
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
@@ -624,30 +965,32 @@
   }
   
   .connect-link:hover {
-    color: #7f9cf5;
+    color: var(--netflix-red);
     text-decoration: underline;
   }
   .connect-link.shiny-text {
     animation: none !important;
     background: none !important;
+    background-clip: unset;
     -webkit-background-clip: unset;
     -webkit-text-fill-color: unset;
   }
 
-  /* Background Animation
-  .animated-background {
+  /* /* Background Animation */
+  #particles-js {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -10;
-    background-image: url('https://www.reactbits.dev/_next/static/media/squares.2fa62142.svg');
+    z-index: -1;
+    background-image: url("https://www.reactbits.dev/_next/static/media/squares.2fa62142.svg");
     background-repeat: repeat;
-    opacity: 0.05;
+    /* opacity: 100; */
     animation: scroll-bg 40s linear infinite;
-    filter: hue-rotate(300deg) contrast(1.2); 
-     background-color: red;
+    filter: hue-rotate(300deg) contrast(1.11); 
+     background-color:var(--netflix-black);
+     /* background-color: rgba(2, 2, 2, 1); */
   }
   
   @keyframes scroll-bg {
@@ -657,18 +1000,9 @@
     to {
       background-position: 1000px 1000px;
     }
-  } */
+  } 
 
-  #particles-js,
-  .animated-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* make sure it's behind everything */
-    pointer-events: none; /* makes it invisible to clicks/interactions */
-  }
+
   
   section, .hero, .experience-grid, .project-tile-grid {
   position: relative;
@@ -691,21 +1025,20 @@
   height: 55px;
   border-radius: 50%;
   border: none;
-  background-color: #ffe53b;
-  background-image: linear-gradient(147deg, #00f5d4 0%, #ff4ec4 74%);
-
+  /* background-color: #ffe53b; */
+  background-image: linear-gradient(147deg,  var(--netflix-dark-gray));
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: poiter;
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
 
 .faq-button i {
-  color: white;
+  color: var(--netflix-red);
   font-size: 1.2rem;
   transition: transform 0.3s ease;
 }
@@ -730,9 +1063,9 @@
   position: absolute;
   top: -28px;
   opacity: 0;
-  background-image: linear-gradient(147deg, #00f5d4 0%, #ff4ec4 74%);
-  color: black;
-  padding: 10px 20px;
+  background-image: linear-gradient(147deg, var(--netflix-red) 0%,var(--netflix-red99) 74%);
+  color: var(--netflix-dark-gray);
+  padding: 8px 20px;
   font-size: 18px;
   border-radius: 6px;
   transition: 0.3s ease;
@@ -740,6 +1073,8 @@
   white-space: nowrap;
   z-index: 2;
 }
+
+
 
 .tooltip::before {
   content: "";
@@ -749,7 +1084,7 @@
   transform: translateX(-50%) rotate(45deg);
   width: 10px;
   height: 10px;
-  background: #ff4ec4;
+  background: var(--netflix-red);
   z-index: -1;
 }
 
@@ -764,8 +1099,8 @@
   height: 50px;
   border: none;
   outline: none;
-  color: #fff;
-  background: #111;
+  background: var(--netflix-red);
+  color: var(--netflix-white);
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -816,16 +1151,17 @@
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   padding-block: 0.5rem;
   padding-inline: 1.25rem;
-  background-color:  #ff009d;
+  background: var(--netflix-red);
+  color: var(--netflix-white);
+  border: none;
   border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #ffff;
   gap: 10px;
   font-weight: bold;
-  border: 3px solid #ffffff4d;
+  /* border: 3px solid #ffffff4d; */
   outline: none;
   overflow: hidden;
   font-size: 15px;
@@ -839,7 +1175,8 @@
 
 .button:hover {
   transform: scale(1.05);
-  border-color: #fff9;
+  /* border-color: #fff9; */
+  background: #b00610;
 }
 
 .button:hover .icon {
@@ -890,8 +1227,18 @@
   transition: 0.4s ease-in-out;
 }
 
+.form-tile {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--netflix-red);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+
 .card {
-  background-image: linear-gradient(163deg, #ff4ec4 0%, #7f9cf5 100%);
+  background-image: linear-gradient(163deg, var(--netflix-red) 10%, var(--netflix-dark-gray) 70%);
   border-radius: 22px;
   transition: all 0.3s;
   margin: auto;
@@ -907,14 +1254,11 @@
   border-radius: 20px;
 }
 
-.card:hover {
-  box-shadow: 0px 0px 30px 1px rgba(255, 78, 196, 0.3);
-}
 
 #heading {
   text-align: center;
   margin-bottom: 0.5em;
-  color: rgb(210, 54, 163);
+  color:var(--netflix-red99);
   font-family: 'Times New Roman', Times, serif;
   font-size: 2em;
   font-weight: 100;
@@ -959,23 +1303,58 @@
   border-radius: 25px;
   border: none;
   outline: none;
-  background: linear-gradient(to right,
-      #7f9cf5,
-      #ff4ec4,
-      #00f5d4);
-  color: white;
+  background: var(--netflix-red);
+  color: var(--netflix-white);
+  border: none;
+  /* color: white; */
   font-weight: 600;
   transition: 0.3s ease-in-out;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   justify-content: center;
-  box-shadow: 0px 0px 12px rgba(255, 78, 196, 0.4);
+  box-shadow: 0px 0px 12px var(--netflix-red);
 }
 
 .button1:hover {
   transform: scale(1.05);
   cursor: pointer;
-  box-shadow: 0px 0px 20px rgba(255, 78, 196, 0.6);
+  /* box-shadow: 0px 0px 20px rgba(255, 78, 196, 0.6); */
+  box-shadow: 0px 0px 20px var(--netflix-red);
+}
+.button1 span {
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  color: black;
 }
 
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-image img {
+  width: auto;
+  height: 500px;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

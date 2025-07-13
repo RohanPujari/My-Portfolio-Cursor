@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Rohan Pujari • Portfolio</title>
-  <link rel="icon" type="image/png" href="E:\Resume\My Portfolio Cursor\Myimage.jpg">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>" sizes="any">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rohan Pujari | Data Scientist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,16 +11,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
-  <div class="animated-background"></div>
 <body>
   <div id="particles-js"></div>
+  <div id="intro-overlay">
+  <div id="spotlight-container">
+    <div class="spotlight"></div>
+     
+    <button class="center-button" id="enterButton">Click Me!</button>
+    </div>
+  </div>
+   
+  
+  <div id="portfolio-content">
     <main class="container">
       <section class="hero">
-        <div class="scrolling-greet">Hi, I'm Rohan Pujari and Welcome to my Portfolio</div>
-        <img src="Myimage.jpg" alt="Rohan Pujari Profile Picture" class="profile-pic" />
-        <h2 id="typewriter"></h2>
-        <p class="subtitle">Data Scientist | ML Engineer | Data Storyteller | Automobile Enthusiast | Kaggle Contributor</p>
-        
+        <div id="welcome-heading" class="scrolling-greet">Hey, I'm Rohan Pujari and Welcome to my Portfolio</div>
+        <img src="image_me1.jpg" alt="Rohan Pujari Profile Picture" class="profile-pic" />
+
+        <h1 id="typewriter"></h1>
+        <p class="subtitle">Data Storyteller | Automobile Enthusiast | Kaggle Contributor</p>
         <div class="badges">
           <span><i class="fas fa-map-marker-alt"></i> New Jersey, USA</span>
           <span><i class="fas fa-briefcase"></i> Open to Work</span>
@@ -55,8 +64,6 @@
       
       </div>
       
-
-      
 <!-- ---------------------------------------------------       -->
     <br>
     <a href="#contact" class="box-button">
@@ -66,17 +73,23 @@
     </a>
     </section>
     
-  
-
   <!-- Include your About Me section -->
-  <section>
-    <h3 class="shiny-text">About Me</h3>
-    <p>
-      I'm Rohan Pujari, a passionate Data Scientist with a strong foundation in machine learning, statistical modeling, and cloud-native solutions. I thrive at the intersection of data and impact building intelligent systems that solve real-world problems.
-      With experience across industry and academia, I’ve engineered end-to-end pipelines, conducted research-driven analysis, and led scalable solutions in fast-paced environments.
-      Outside work, I enjoy exploring visual storytelling, sports, and mentoring aspiring data professionals.
-    </p>
+
+
+  <section class="about-me fade-in-section">
+    <div class="about-container">
+      <div class="about-text">
+        <h3 class="shiny-text">About Me</h3>
+        <p>I'm Rohan Pujari, a passionate Data Scientist with a strong foundation in machine learning, statistical modeling, and cloud-native solutions. I thrive at the intersection of data and impact building intelligent systems that solve real-world problems.
+          With experience across industry and academia, I’ve engineered end-to-end pipelines, conducted research-driven analysis, and led scalable solutions in fast-paced environments.
+          Outside work, I enjoy exploring visual storytelling, sports, and mentoring aspiring data professionals.</p>
+      </div>
+      <div class="about-image">
+        <img src="My_IMG.jpg" alt="Rohan Pujari" />
+      </div>
+    </div>
   </section>
+
   <!-- Include your Skills & Technologies section -->
   <section>
     <h3 class="shiny-text">Skills & Technologies</h3>
@@ -108,7 +121,7 @@
         <ul>
           <li>AWS</li>
           <li>Google Cloud</li>
-          <li>Azure</li>
+          <li>ML OPS</li>
           <li>Docker</li>
           <li>Kubernetes</li>
           <li>CI/CD Pipelines</li>
@@ -134,7 +147,7 @@
     <div class="edu-grid">
       <div class="edu-card">
         <h4>Master of Sciences in Data Science</h4>
-        <span style="color: #7f9cf5;" class="highlight-text">New Jersey Institute of Technology (NJIT)</span><br>
+        <span style="color: var(--netflix-red)" class="highlight-text">New Jersey Institute of Technology (NJIT)</span><br>
         <span><i class="fas fa-calendar-alt"></i> September 2022 - May 2024</span><span class="gpa"> GPA: 3.75</span><br>
         <br>
         <ul>
@@ -151,7 +164,7 @@
       </div>
       <div class="edu-card">
         <h4>Post Graduation Diploma in Data Science</h4>
-        <span style="color: #7f9cf5;" class="highlight-text">International Institute of Information Technology (IIIT-B)</span><br>
+        <span style="color: var(--netflix-red)" class="highlight-text">International Institute of Information Technology (IIIT-B)</span><br>
         <span><i class="fas fa-calendar-alt"></i> January 2021 - February 2022 <span class="gpa"> GPA: 3.2</span><br>
         <br>
         <ul>
@@ -174,7 +187,7 @@
       <div class="experience-tile">
         <div class="tile-header">
           <img src="comnatix_cover.jpeg" alt="Comnatix Logo" class="tile-logo">
-         <h4 style ="color: #7f9cf5"><span class="job-title">Data Scientist</span> 
+         <h4><span class="job-title">Data Scientist</span> 
           <span class="company">@ Comnatix LLC</span></h4>
           <p class="timeline-date">Sept 2024 – Present</p>
         </div>
@@ -198,7 +211,7 @@
       <div class="experience-tile">
       <div class="tile-header">
         <img src="NJITlogo.jpg" alt="NJIT Logo" class="tile-logo">
-        <h4 style ="color: #7f9cf5;"><span class="job-title">Data Scientist</span> <span class="company">@ New Jersey Institute of Technology</span></h4>
+        <h4 ><span class="job-title">Data Scientist</span> <span class="company">@ New Jersey Institute of Technology</span></h4>
           <p class="timeline-date">Nov 2022 – May 2024</p>
         </div>
         <div class="tile-details">
@@ -225,7 +238,7 @@
       <div class="experience-tile">
         <div class="tile-header">
         <img src="LTI.webp" alt="LTI Logo" class="tile-logo">
-          <h4 style ="color: #7f9cf5;"><span class="job-title">Data Scientist</span> <span class="company">@ Larsen and Toubro Infotech</span></h4>
+          <h4><span class="job-title">Data Scientist</span> <span class="company">@ Larsen and Toubro Infotech</span></h4>
 
           <p class="timeline-date">Dec 2019 – July 2022</p>
         </div>
@@ -246,7 +259,6 @@
           </ul>
         </div>
       </div>
-    </div>
     </div>
   </section> 
 
@@ -339,7 +351,8 @@
     <div class="card">
       <div class="card2">
         <form class="form" action="https://formspree.io/f/mblydkdj" method="POST">
-          <p id="heading">Let’s build what doesn’t exist yet!</p>
+          <div class="form-tile">Let’s build what doesn’t exist yet!</div>
+          <!-- <p id="heading">Let’s build what doesn’t exist yet!</p> -->
     
           <div class="field">
             <svg class="input-icon" viewBox="0 0 16 16" fill="currentColor" height="16" width="16">
@@ -365,25 +378,107 @@
     
           <div class="btn">
             <button class="button1">
-              Send Message <i class="fas fa-arrow-right"></i>
+              <span>Send Message <i class="fas fa-arrow-right"></i></span> 
             </button>
           </div>
-          
         </form>
       </div>
-    </div>
-    
-
-      
+    </div>   
   </section>
   
   <footer class="footer">
     &copy; 2025 Rohan Pujari. All Rights Reserved.
   </footer>
+
 </main>
+
+</div><script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
+  document.getElementById('enterButton').addEventListener('click', function() {
+            document.getElementById('intro-overlay').classList.add('hidden');
+            document.getElementById('portfolio-content').classList.add('show');
+ });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const enterBtn = document.querySelector('.center-button');
+  const overlay = document.getElementById('intro-overlay');
+  const spotlight = document.querySelector('.spotlight');
+  // const btn = document.getElementById('enter-btn');
+  const portfolioContent = document.getElementById('portfolio-content');
+  // const typewriterElement = document.getElementById('typewriter');
+  // const headingText = "Hey, I'm Rohan Pujari and Welcome to my Portfolio";
+//   let charIndex = 0;
+  // const text = "Data Scientist & ML Engineer1";
+//   const el = document.getElementById("typewriter");
+// el.innerText = ""; // Clear it before starting
+
+
+// let interval = setInterval(() => {
+//   el.innerText += text[index++];
+//   if (index === text.length) clearInterval(interval);
+// }, 100);
+  
+  function typeText(element, text, speed = 60) {
+    let index = 0;
+    element.innerHTML = "";
+
+    function type() {
+      if (index < text.length) {
+        element.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, speed);
+      }
+    }
+
+    type();
+  }
+
+  // enterBtn.addEventListener('click', function () {
+  //     overlay.classList.add('hidden');
+  //     content.classList.add('show');
+  //   });
+
+
+  // Spotlight animation trigger (optional manual fallback)
+  // function animateSpotlight() {
+  //   spotlight.classList.add('animate-spotlight');
+  // }
+
+  // Event listener for the "Welcome to my Portfolio" button
+//   let typedOnce = false;
+//   btn.addEventListener('click', () => {
+//     overlay.classList.add('hidden');  // Hide intro overlay
+//     portfolioContent.classList.add('show');  // Show main content
+
+//     if (!typedOnce){
+//   // ✅ Only call this ONCE
+//     typeText(typewriterElement, "A Passionate Data Scientist");
+//   }
+// });
+
+  // Intersection Observer for fade-in sections
+  const sections = document.querySelectorAll('.fade-in-section');
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
+  // particles.js configuration
   particlesJS("particles-js", {
     "particles": {
       "number": { "value": 70, "density": { "enable": true, "value_area": 800 } },
@@ -414,7 +509,8 @@
     },
     "retina_detect": true
   });
-</script>
+});
 
+</script>
 </body>
 </html>

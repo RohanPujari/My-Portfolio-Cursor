@@ -1,95 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Particles Background Example</title>
-  <style>
-    /* Fullscreen particles background */
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: #0d0d0d;
-      z-index: -1;
-      top: 0;
-      left: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Spotlight</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Hide scrollbars */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            background-color: #000; /* Black background for darkness */
+            font-family: Arial, sans-serif;
+        }
 
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      height: 100%;
-      color: white;
-    }
+        .spotlight-container {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Take full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      z-index: 1;
-      position: relative;
-    }
-  </style>
+        .spotlight {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0; /* Start with no width */
+            height: 0; /* Start with no height */
+            background: radial-gradient(ellipse at top, rgba(173, 216, 230, 0.7) 0%, rgba(0, 0, 0, 0) 70%);
+            /* Light blue/purple tint, fading to transparent */
+            animation: shine 2s forwards; /* Animation for the spotlight effect */
+            pointer-events: none; /* Allow clicks on button through spotlight */
+        }
+
+        @keyframes shine {
+            from {
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+            to {
+                width: 60%; /* Adjust width as needed for the spotlight spread */
+                height: 80%; /* Expand to full height */
+                opacity: 1;
+            }
+        }
+
+        .center-button {
+            position: relative; /* Position relative to allow z-index to work */
+            z-index: 1; /* Ensure button is above the spotlight */
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: #4CAF50; /* Example button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            opacity: 0; /* Start button hidden */
+            animation: fadeInButton 2.5s forwards 1.5s; /* Fade in button after spotlight appears */
+        }
+
+        .center-button:hover {
+            background-color: #45a049;
+        }
+
+        @keyframes fadeInButton {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Particles background container -->
-  <div id="particles-js"></div>
-
-  <!-- Main content -->
-  <section class="hero">
-    <h1>Hello, I'm Rohan</h1>
-    <p>This is a test of particles background</p>
-  </section>
-
-  <!-- Load particles.js -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-  <!-- Load configuration inline instead of external file -->
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {
-          "value": 60,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
-        },
-        "color": { "value": "#ff4ec4" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.3 },
-        "size": { "value": 3 },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#7f9cf5",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 2
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "grab" }
-        },
-        "modes": {
-          "grab": {
-            "distance": 200,
-            "line_linked": { "opacity": 0.7 }
-          }
-        }
-      },
-      "retina_detect": true
-    });
-  </script>
+    <div class="spotlight-container">
+        <div class="spotlight"></div>
+        <button class="center-button">Click Me!</button>
+    </div>
 </body>
 </html>
