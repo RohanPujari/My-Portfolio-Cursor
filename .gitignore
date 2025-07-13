@@ -1,2 +1,6 @@
-My_IMG.HEIC
-particles.json
+*.HEIC
+*.json
+/images/*
+scripts.js
+test.html
+demo.html
