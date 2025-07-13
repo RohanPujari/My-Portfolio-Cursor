@@ -14,10 +14,12 @@
 <body>
   <div id="particles-js"></div>
   <div id="intro-overlay">
-  <div id="spotlight-container">
     <div class="spotlight"></div>
-     
-    <button class="center-button" id="enterButton">Click Me!</button>
+  <div id="spotlight-container">
+    
+     <!-- <h2>Hi, Thanks for your Interest to know about me. Let's dive into my Portfolio</h2> -->
+
+    <button class="center-button"  id="enterButton">Let’s Dive into my Portfolio</button>
     </div>
   </div>
    
@@ -26,7 +28,7 @@
     <main class="container">
       <section class="hero">
         <div id="welcome-heading" class="scrolling-greet">Hey, I'm Rohan Pujari and Welcome to my Portfolio</div>
-        <img src="image_me1.jpg" alt="Rohan Pujari Profile Picture" class="profile-pic" />
+        <img src="images/image_me1.jpg" alt="Rohan Pujari Profile Picture" class="profile-pic" />
 
         <h1 id="typewriter"></h1>
         <p class="subtitle">Data Storyteller | Automobile Enthusiast | Kaggle Contributor</p>
@@ -74,18 +76,18 @@
     </section>
     
   <!-- Include your About Me section -->
-
-
   <section class="about-me fade-in-section">
     <div class="about-container">
       <div class="about-text">
         <h3 class="shiny-text">About Me</h3>
-        <p>I'm Rohan Pujari, a passionate Data Scientist with a strong foundation in machine learning, statistical modeling, and cloud-native solutions. I thrive at the intersection of data and impact building intelligent systems that solve real-world problems.
-          With experience across industry and academia, I’ve engineered end-to-end pipelines, conducted research-driven analysis, and led scalable solutions in fast-paced environments.
-          Outside work, I enjoy exploring visual storytelling, sports, and mentoring aspiring data professionals.</p>
+        <p>I am Rohan Pujari, a dynamic Data Scientist with over 5 years of experience at the forefront of designing and deploying advanced machine learning solutions across the financial services and education sectors. My passion lies in transforming complex, often unstructured, data into actionable intelligence that drives measurable business impact and strategic decision-making.
+
+          <p>My expertise spans the entire data lifecycle, from high-performance ETL pipeline optimization and robust data preprocessing to the development and deployment of sophisticated models. I specialize in Natural Language Processing (NLP), including cutting-edge applications of Large Language Models (LLMs) for financial document processing and text summarization, where I've achieved significant efficiency gains (e.g., reducing analyst effort by 70%). My toolkit includes Python, AWS (S3, Glue, Bedrock), Snowflake, SQL and a deep command of various ML frameworks like TensorFlow and Scikit-learn.</p>
+          
+          <p>I thrive on solving real-world problems, whether it's forecasting customer churn and risk with predictive analytics, optimizing customer engagement policies through reinforcement learning, or enhancing institutional reputation by extracting insights from academic data. I am adept at cross-functional collaboration, translating technical complexities into clear, data-driven strategies. My commitment extends beyond model building; I focus on creating scalable, production-ready solutions that deliver real-time insights and tangible value.</p>
       </div>
       <div class="about-image">
-        <img src="My_IMG.jpg" alt="Rohan Pujari" />
+        <img src="images/My_IMG.jpg" alt="Rohan Pujari" />
       </div>
     </div>
   </section>
@@ -148,7 +150,7 @@
       <div class="edu-card">
         <h4>Master of Sciences in Data Science</h4>
         <span style="color: var(--netflix-red)" class="highlight-text">New Jersey Institute of Technology (NJIT)</span><br>
-        <span><i class="fas fa-calendar-alt"></i> September 2022 - May 2024</span><span class="gpa"> GPA: 3.75</span><br>
+        <span><i class="fas fa-calendar-alt"></i> September 2022 - May 2024</span><span class="gpa"></span><br>
         <br>
         <ul>
           <li>Developed strong foundations in machine learning, natural language processing, and data engineering, with hands-on projects simulating real-world challenges in business, education, and research.</li>
@@ -165,15 +167,20 @@
       <div class="edu-card">
         <h4>Post Graduation Diploma in Data Science</h4>
         <span style="color: var(--netflix-red)" class="highlight-text">International Institute of Information Technology (IIIT-B)</span><br>
-        <span><i class="fas fa-calendar-alt"></i> January 2021 - February 2022 <span class="gpa"> GPA: 3.2</span><br>
+        <span><i class="fas fa-calendar-alt"></i> January 2021 - February 2022 <span class="gpa"></span><br>
         <br>
         <ul>
-          <li>Gained in-depth understanding and practical intuition of core machine learning algorithms including regression, classification, and clustering</li>
-          <li>Explored deep learning models such as CNNs and RNNs, and understood their applications in image and sequence data</li>
-          <li>Developed strong analytical skills by working on real-world datasets and use cases across various domains</li>
-          <li>Realized the critical importance of data preprocessing, exploratory analysis, and feature engineering in successful model building</li>
-          <li>Built hands-on experience through multiple academic projects, both individually and in teams, applying data science techniques from end-to-end</li>
+          <li>Gained in-depth understanding and practical intuition of core machine learning algorithms including regression, classification and clustering.</li>
+          <li>Gained hands-on experience with deep learning models like CNNs, RNNs, and Transformers for tasks in computer vision, time-series forecasting, and NLP.</li>
+          <li>Developed strong analytical skills, working on real-world datasets & use cases across various domains.</li>
+          <li>Realized the critical importance of data preprocessing, exploratory analysis, and feature engineering in successful model building.</li>
+          <li>Built hands-on experience through multiple academic projects, both individually and in teams, applying data science techniques from end-to-end.</li>
         </ul>
+        <strong>Relevant Coursework:</strong>
+        <div class="tags">
+          <span>Excel</span><span>Machine Learning</span><span>Tree Models</span><span>Advance Regression</span><span>Model Deployment</span>
+          <span>Neutral Networks</span><span>Time Series Analysis</span><span>Math For Data Analysis</span>
+        </div>
       </div>
     </div>
   </section>
@@ -186,7 +193,7 @@
 
       <div class="experience-tile">
         <div class="tile-header">
-          <img src="comnatix_cover.jpeg" alt="Comnatix Logo" class="tile-logo">
+          <img src="images/comnatix_cover.jpeg" alt="Comnatix Logo" class="tile-logo">
          <h4><span class="job-title">Data Scientist</span> 
           <span class="company">@ Comnatix LLC</span></h4>
           <p class="timeline-date">Sept 2024 – Present</p>
@@ -210,7 +217,7 @@
     <!-- <div class="experience-grid"> -->
       <div class="experience-tile">
       <div class="tile-header">
-        <img src="NJITlogo.jpg" alt="NJIT Logo" class="tile-logo">
+        <img src="images/NJITlogo.jpg" alt="NJIT Logo" class="tile-logo">
         <h4 ><span class="job-title">Data Scientist</span> <span class="company">@ New Jersey Institute of Technology</span></h4>
           <p class="timeline-date">Nov 2022 – May 2024</p>
         </div>
@@ -237,7 +244,7 @@
 
       <div class="experience-tile">
         <div class="tile-header">
-        <img src="LTI.webp" alt="LTI Logo" class="tile-logo">
+        <img src="images/LTI.webp" alt="LTI Logo" class="tile-logo">
           <h4><span class="job-title">Data Scientist</span> <span class="company">@ Larsen and Toubro Infotech</span></h4>
 
           <p class="timeline-date">Dec 2019 – July 2022</p>
@@ -404,20 +411,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const enterBtn = document.querySelector('.center-button');
   const overlay = document.getElementById('intro-overlay');
   const spotlight = document.querySelector('.spotlight');
-  // const btn = document.getElementById('enter-btn');
   const portfolioContent = document.getElementById('portfolio-content');
-  // const typewriterElement = document.getElementById('typewriter');
-  // const headingText = "Hey, I'm Rohan Pujari and Welcome to my Portfolio";
-//   let charIndex = 0;
-  // const text = "Data Scientist & ML Engineer1";
-//   const el = document.getElementById("typewriter");
-// el.innerText = ""; // Clear it before starting
+  const aboutImageContainer = document.querySelector('.about-image');
+    const aboutImage = document.querySelector('.about-image img');
 
+    if (aboutImageContainer && aboutImage) { // Ensure elements exist
+        const sensitivity = 0.5; // Adjust this value for more or less intense tilt
 
-// let interval = setInterval(() => {
-//   el.innerText += text[index++];
-//   if (index === text.length) clearInterval(interval);
-// }, 100);
+        aboutImageContainer.addEventListener('mousemove', (e) => {
+            const rect = aboutImageContainer.getBoundingClientRect();
+            const x = e.clientX - rect.left; // X position within the element
+            const y = e.clientY - rect.top;  // Y position within the element
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / centerY * sensitivity * 10; // Max 10 degrees tilt
+            const rotateY = (x - centerX) / centerX * sensitivity * -10; // Max -10 degrees tilt (inverted for natural feel)
+
+            aboutImage.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.01)`;
+        });
+
+        aboutImageContainer.addEventListener('mouseleave', () => {
+            // Reset the image transformation when mouse leaves
+            aboutImage.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+        });
+    }
   
   function typeText(element, text, speed = 60) {
     let index = 0;
@@ -433,29 +452,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     type();
   }
-
-  // enterBtn.addEventListener('click', function () {
-  //     overlay.classList.add('hidden');
-  //     content.classList.add('show');
-  //   });
-
-
-  // Spotlight animation trigger (optional manual fallback)
-  // function animateSpotlight() {
-  //   spotlight.classList.add('animate-spotlight');
-  // }
-
-  // Event listener for the "Welcome to my Portfolio" button
-//   let typedOnce = false;
-//   btn.addEventListener('click', () => {
-//     overlay.classList.add('hidden');  // Hide intro overlay
-//     portfolioContent.classList.add('show');  // Show main content
-
-//     if (!typedOnce){
-//   // ✅ Only call this ONCE
-//     typeText(typewriterElement, "A Passionate Data Scientist");
-//   }
-// });
 
   // Intersection Observer for fade-in sections
   const sections = document.querySelectorAll('.fade-in-section');
