@@ -5,10 +5,6 @@
     font-family: 'Inter', sans-serif;
   }
 
-  /* ---------------------------- */
-
-  /* Add this to your CSS for Netflix-style intro animation and color adaptation */
-/* Add this to your CSS for Netflix-style intro animation and color adaptation */
 
 /* Netflix-style color variables */
 :root {
@@ -56,12 +52,9 @@
 
 
 #portfolio-content {
-  /* display: none; /* REMOVE OR COMMENT THIS OUT */ 
   visibility: hidden; /* Start hidden */
   opacity: 0; /* Start fully transparent */
   transition: opacity 0.5s ease 0.8s, visibility 0s linear 1.3s; /* Fade in over 0.5s, become visible after 0.8s, delay visibility change */
-  /* The 0.8s delay on opacity transition ensures it fades in AFTER the intro overlay slides away.
-     The 1.3s delay on visibility (0.8s + 0.5s) ensures it only becomes 'visible' to clicks AFTER it's fully opaque. */
 }
 
 /* Show it when the class is added */
@@ -397,15 +390,10 @@ body {
   }
 
 
-/* Add this new rule to your style.css */
 
-/* --- New Styles for .center-button (Inspired by Purple Rat) --- */
 /* --------------------------------------------------------------------------------------------------------------------------------------------------- */
 .center-button {
-  /* Define custom properties for easier color modification */
   --button-text-color: #ffffff; /* Netflix White for text */
-
-  /* Basic Button Styling */
   position: relative; /* Needed for background positioning */
   cursor: pointer;
   display: flex; /* To center content */
@@ -439,8 +427,7 @@ body {
 
   /* Transition for all properties - crucial for smooth animation */
   transition: all 0.3s cubic-bezier(0.02, 1, 0.3, 1);
-  /* The cubic-bezier values are from the original effect for a specific animation curve */
-  /* Initial filter for the button's background - no blur initially */
+
   filter: blur(0px); 
 }
 
@@ -458,7 +445,6 @@ body {
   /* You can remove or change the box-shadow on hover to create different effects */
   box-shadow: 0 0 15px var(--netflix-red); /* Slightly more prominent shadow on hover */
   /* Or, if you want the Uiverse's specific look (which removes the shadow): */
-  /* box-shadow: none; */
 }
 
 /* --- Active (Click) State --- */
@@ -471,11 +457,6 @@ body {
   transition: transform 1.2s ease-out; 
 }
 /* --------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-/* Make sure to remove or comment out any old styles for your "Click Me!" button
- if they were associated with a different class, like `.hero-button`,
- to prevent conflicts.
-*/
 
 
   section {
@@ -602,20 +583,21 @@ body {
   
 
   .experience-tile {
+    position: relative;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
-    overflow: hidden;
     transition: all 0.5s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     padding: 1rem;
-    position: relative;
-    max-height: 190px;
     display: flex;
-  flex-direction: column;
+    flex-direction: column;
+    height: auto; /* Ensures tile height adjusts to content */
+    cursor: pointer; /* Indicate it's interactive */
+    z-index: 1;
   }
   
+
   .experience-tile:hover {
-    max-height: 500px;
+    max-height: auto;
     overflow-y: auto; 
     transition: all 0.5s ease;
     box-shadow: 0 8px 20px var(--netflix-red);
@@ -634,14 +616,11 @@ body {
   
   .tile-header h4 {
     color:var(--netflix-red);
-    font-size: 2.8rem;
+    font-size: 1.8rem;
     margin-bottom: 0.2rem;
   }
 
   .job-title {
-    /* color:var(--netflix-red) !important;
-    font-weight: 200; */
-
     font-size: 1.5rem;
     font-weight: 1000;
     color: var(--netflix-red) !important;
@@ -664,35 +643,29 @@ body {
   }
   
   .tile-details {
-    /* margin-top: 1rem; */
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.4s ease;
     pointer-events: none;
-    max-height: 300px;
-    overflow-y: auto;
+    overflow-y: visible;
     margin-top: 1rem;
-    padding-right: 0.5rem;
-    scroll-behavior: smooth;
+    padding-right: 0;
+    flex-grow: 1;
   }
   
   .experience-tile:hover .tile-details {
-    opacity: 1;
+    /* opacity: 1; */
     pointer-events: auto;
   }
   
   .tile-details ul {
+    list-style: disc;
     padding-left: 1.2rem;
     color: #eee;
     font-size: 0.95rem;
     line-height: 1.6;
-    padding-left: 1.2rem;
-    color: #eee;
-    font-size: 0.95rem;
-    line-height: 3.6;
+    margin-bottom: 0;
   }  
 
-
-/* -------------------------------------------- */
   
   .tile-logo {
     width: 80px;
@@ -704,7 +677,7 @@ body {
   .tile-content {
     text-align: center;
   }
-/* ================================================================================================   */
+
   .experience-tile h4 {
     color: var(--netflix-white);
     font-size: 1.3rem;
@@ -779,22 +752,21 @@ body {
     margin-bottom: 0.5rem;
     line-height: 1.6;
   }
+
+
   .hero {
     position: relative;
     height: 100vh;
     padding: 2rem;
     color: white;
     text-align: center;
-    /* background-image: url('istockphoto-1448152453-612x612.jpg'); Replace with your image path */
     background-size: cover;
     background-position: center;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     z-index: 1;
   }
-
-
 
   .hero * {
     z-index: 1;
@@ -812,8 +784,6 @@ body {
     margin: 0 auto 1rem;
     animation: typing 3.5s steps(52, end), blink 1s step-end infinite alternate;
   }
-
-
 
 
   @keyframes typing {
@@ -851,7 +821,6 @@ body {
   .cta-button {
     display: inline-block;
     padding: 0.8rem 2rem;
-    /* background: linear-gradient(to right, #ff007f, #cc66ff); */
     color: white;
     color: var(--netflix-white);
     border-radius: 8px;
@@ -875,7 +844,6 @@ body {
     90deg,
     var(--netflix-red),
     var(--netflix-red99)
-    /* var(--netflix-red66) */
    
   );
     background-size: 100%;
@@ -896,7 +864,6 @@ body {
     }
   }
 
-  --------------------------------------------
   .cta-button.shiny-text {
     background: none;
     padding: 0.8rem 2rem;
@@ -978,8 +945,6 @@ body {
 }
  
 
-/* -====================== */
-
 .faq-icon-wrapper {
   display: flex;
   justify-content: center;
@@ -992,7 +957,6 @@ body {
   height: 55px;
   border-radius: 50%;
   border: none;
-  /* background-color: #ffe53b; */
   background-image: linear-gradient(147deg,  var(--netflix-dark-gray));
   display: flex;
   align-items: center;
@@ -1060,7 +1024,7 @@ body {
   opacity: 1;
 }
 
- /* -------------------------------------------------------- */
+ 
  .glow-on-hover {
   width: 140px;
   height: 50px;
@@ -1109,7 +1073,6 @@ body {
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
- /* -------------------------------------------------------- */
  
  /* Button style from Uiverse.io by adeladel522 */  
 .button {
@@ -1128,7 +1091,6 @@ body {
   cursor: pointer;
   gap: 10px;
   font-weight: bold;
-  /* border: 3px solid #ffffff4d; */
   outline: none;
   overflow: hidden;
   font-size: 15px;
@@ -1142,7 +1104,6 @@ body {
 
 .button:hover {
   transform: scale(1.05);
-  /* border-color: #fff9; */
   background: #b00610;
 }
 
@@ -1273,7 +1234,6 @@ body {
   background: var(--netflix-red);
   color: var(--netflix-white);
   border: none;
-  /* color: white; */
   font-weight: 600;
   transition: 0.3s ease-in-out;
   display: flex;
@@ -1286,7 +1246,6 @@ body {
 .button1:hover {
   transform: scale(1.05);
   cursor: pointer;
-  /* box-shadow: 0px 0px 20px rgba(255, 78, 196, 0.6); */
   box-shadow: 0px 0px 20px var(--netflix-red);
 }
 .button1 span {
@@ -1307,15 +1266,9 @@ body {
   flex: 1;
   min-width: 280px;
 }
-/* ------------------------------------------------------------------------------------ */
-/* Image modifications */
 
 .about-image {
-  /* Existing styles: */
-  /* width: auto; */ /* You might need to set an explicit width if auto causes issues with sizing for perspective */
-  /* height: 500px; */ /* If you set this on the img, maybe remove it here or match */
 
-  /* New 3D related styles: */
   perspective: 1000px; /* Defines the depth of the 3D space for children */
   display: flex; /* Helps center the image if needed */
   justify-content: center;
@@ -1323,26 +1276,17 @@ body {
   /* You might want to remove 'overflow: hidden;' if it's there, as it can clip 3D transforms */
 }
 
-/* 2. The Image Itself - Initial State & Transition */
 .about-image img {
   /* Existing styles: */
   width: auto; /* Or set a fixed width if desired */
   height: 500px;
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-
-  /* New 3D related styles: */
   transform-style: preserve-3d; /* Ensures children (if any) also participate in 3D space */
   transition: transform 0.1s ease-out; /* Smooth transition for the tilt */
-  /* We'll dynamically change 'transform' with JavaScript */
-
-  /* Add a subtle pseudo-element for depth/border if desired, similar to pixel-card */
   position: relative; /* Needed for pseudo-elements */
 }
 
-/* Optional: Adding a subtle border/depth effect (like pixel-card) */
-/* This creates an inner shadow or border that reacts to the tilt. */
-/* You'll need to adjust content-box to border-box if this doesn't appear correctly */
 .about-image img::before {
   content: '';
   position: absolute;
@@ -1351,7 +1295,6 @@ body {
   right: 0;
   bottom: 0;
   border-radius: inherit; /* Inherit border-radius from parent */
-  /* This creates a light inner border that appears when tilted */
   box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.05), /* Subtle inner glow */
               0 0 20px rgba(0, 0, 0, 0.3); /* Outer shadow that enhances 3D */
   transform: translateZ(2px); /* Give it a slight Z-depth */
@@ -1371,7 +1314,6 @@ body {
               0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* ------------------------------------------------------------------------------------------------- */
 .fade-in-section {
   opacity: 0;
   transform: translateY(40px);

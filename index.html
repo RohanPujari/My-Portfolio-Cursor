@@ -19,7 +19,7 @@
     
      <!-- <h2>Hi, Thanks for your Interest to know about me. Let's dive into my Portfolio</h2> -->
 
-    <button class="center-button"  id="enterButton">Let’s Dive into my Portfolio</button>
+    <button class="center-button"  id="enterButton">Let's Dive into my Portfolio</button>
     </div>
   </div>
    
@@ -196,7 +196,7 @@
           <img src="images/comnatix_cover.jpeg" alt="Comnatix Logo" class="tile-logo">
          <h4><span class="job-title">Data Scientist</span> 
           <span class="company">@ Comnatix LLC</span></h4>
-          <p class="timeline-date">Sept 2024 – Present</p>
+          <p class="timeline-date">Sept 2024 - Present</p>
         </div>
         <div class="tile-details">
          
@@ -219,7 +219,7 @@
       <div class="tile-header">
         <img src="images/NJITlogo.jpg" alt="NJIT Logo" class="tile-logo">
         <h4 ><span class="job-title">Data Scientist</span> <span class="company">@ New Jersey Institute of Technology</span></h4>
-          <p class="timeline-date">Nov 2022 – May 2024</p>
+          <p class="timeline-date">Nov 2022 - May 2024</p>
         </div>
         <div class="tile-details">
           <ul>
@@ -232,11 +232,11 @@
             <li>Enhanced NLP models using NLTK and SpaCy to analyze unstructured data from surveys and academic papers, producing
               sentiment analysis, text summarization, and word cloud visualizations to bolster institutional reputation.</li>
             <li>Employed supervised learning techniques such as Random Forest, K-Nearest Neighbors (k-NN), and Decision Trees to classify
-              colleges based on doctoral degree conferral data and faculty counts (IPEDS 2019–20, Fall 2020), enhancing institutional analytics.</li>
+              colleges based on doctoral degree conferral data and faculty counts (IPEDS 2019-20, Fall 2020), enhancing institutional analytics.</li>
             <li>Developed a research classification model to categorize institutions into R1, R2, and R3 research activity levels, supporting
-              strategic initiatives to improve the university’s research standing.</li>
+              strategic initiatives to improve the university's research standing.</li>
             <li>Applied Principal Component Analysis (PCA) on NSF fiscal year 2020 research and development datasets, uncovering critical
-              insights that contributed to the university’s improved R1 ranking and strategic decision-making.</li>
+              insights that contributed to the university's improved R1 ranking and strategic decision-making.</li>
           </ul>
         </div>
       </div>
@@ -247,7 +247,7 @@
         <img src="images/LTI.webp" alt="LTI Logo" class="tile-logo">
           <h4><span class="job-title">Data Scientist</span> <span class="company">@ Larsen and Toubro Infotech</span></h4>
 
-          <p class="timeline-date">Dec 2019 – July 2022</p>
+          <p class="timeline-date">Dec 2019 - July 2022</p>
         </div>
         <div class="tile-details">
           <ul>
@@ -269,9 +269,7 @@
     </div>
   </section> 
 
-
   <!-- Include your Academic Projects section -->
-
 
    <section>
     <h3 class="shiny-text">Academic Projects</h3>
@@ -280,8 +278,36 @@
       
 
       <div class="project-tile">
+        <!-- <div class="project-content">  -->
+        <div class="project-title">Heart Disease Risk Prediction & Deployment </div>
+        <p class="project-subtitle">Real-time heart disease risk prediction using logistic regression deployed on AWS SageMaker with an interactive web frontend.</p>
+        <ul>
+          <li><strong>Tech stack:</strong> Python, Jupyter Notebook, pandas, scikit-learn; data prep and analysis in Excel/CSV formats.</li>
+    <li>Built a logistic regression model using structured health data (symptoms, vitals, lifestyle factors) to predict heart disease risk. Packaged model into .tar.gz, deployed it as a real-time endpoint using AWS SageMaker.</li>
+    <li>Created a clean Streamlit web app to collect user inputs and invoke the SageMaker endpoint. Applied conditional styling to reflect diagnosis confidence: vibrant UI for risk alerts, muted design for low risk.</li>
+    <li>Resolved deployment issues including cold starts, model artifact structure, JSON input formatting, and health checks.</li>
+    <li>Demonstrated production-readiness with understanding of SageMaker internals, cost scaling, latency optimization, and autoscaling. Positioned as a strong showcase of full-stack ML deployment on the cloud.</li>
+        </ul>
+      </div>
+    <!-- </div> -->
+
+      <div class="project-tile">
+        <!-- <div class="project-content">  -->
+        <div class="project-title">AI-Powered News Summarization</div>
+        <p class="project-subtitle">Automated real-time news scraping & summarization using Transformer-based models.</p>
+        <ul>
+          <li><strong>Tech stack:</strong> Python, Flask, HTML/CSS, HuggingFace Transformers, Pegasus (NLP), newspaper3k, feedparser.</li>
+    <li> Used feedparser to ingest RSS feeds (e.g., NYT), scraped full articles via newspaper3k, and applied Google's PEGASUS model for abstractive summarization.</li>
+    <li> Built a Flask-based web app with custom HTML/CSS to display a scrollable, inshorts-style feed—each card showing a headline, image, and AI-generated summary.</li>
+    <li> Optimized Pegasus inference using pre-tokenization and batching to reduce load latency; ensured visual coherence with automated image extraction and fallback handling.</li>
+    <li> Enhanced user experience by hiding backend logic (like URLs and RSS controls) and maintaining continuous content refreshes based on feed updates.</li>
+        </ul>
+      <!-- </div> -->
+    </div>
+
+      <div class="project-tile">
         <div class="project-title">Alcohol Craving Prediction & Intervention</div>
-        <p class="project-subtitle">Real‑time craving prediction using wearables and ML, triggering timely behavioral interventions.</p>
+        <p class="project-subtitle">Real-time craving prediction using wearables and ML, triggering timely behavioral interventions.</p>
         <ul>
           <li><strong>Tech stack:</strong> Python, pandas; ML models: Random Forest & LSTM; model interpretability: SHAP</li>
     <li>Collected sensor data (heart rate, sleep, stress) paired with self-reported mood, engineered time-series features to predict alcohol craving episodes.</li>
@@ -289,19 +315,18 @@
     <li> Developed an app that triggers personalized strategies (mindfulness, alerts, peer support, journaling, activity suggestions) when craving risk is high.</li>
     <li>Proven impact in simulation: Demonstrated a potential 15% reduction in relapse rates and provided insights valuable for behavioral healthcare and further addiction analytics research.</li>
         </ul>
-      </div>
+    </div>
       
-  
       <div class="project-tile">
-        <div class="project-title">Neural Networks Project – Gesture Recognition</div>
-        <p class="project-subtitle">Smart‑TV control via webcam‑based recognition of five hand gestures using neural network architectures.</p>
+        <div class="project-title">Neural Networks Project - Gesture Recognition</div>
+        <p class="project-subtitle">Smart-TV control via webcam-based recognition of five hand gestures using neural network architectures.</p>
         <ul>
-          <li>Tech stack: Python, OpenCV, TensorFlow/Keras; architectures: 3D Convolutional Network (Conv3D) and CNN + RNN (LSTM/GRU)</li>
-          <li>Built dataset of 2–3 s videos (30 frames) across five gestures (thumbs up/down, left/right swipe, stop); preprocessed frames for training</li>
-          <li>Implemented and compared two models: Conv3D (spatiotemporal video analysis) and CNN+RNN (frame‑wise feature extraction + sequence modeling)</li>
-          <li>Impact: Enabled real-time, remote‑free control of TV functions like volume and playback through gesture commands</li>
+          <li>Tech stack: Python, OpenCV, TensorFlow/Keras; architectures: 3D Convolutional Network (Conv3D) and CNN + RNN (LSTM/GRU)</li>
+          <li>Built dataset of 2-3 sec videos (30 frames) across five gestures (thumbs up/down, left/right swipe, stop); preprocessed frames for training</li>
+          <li>Implemented and compared two models: Conv3D (spatiotemporal video analysis) and CNN+RNN (frame-wise feature extraction + sequence modeling)</li>
+          <li>Impact: Enabled real-time, remote-free control of TV functions like volume and playback through gesture commands</li>
         </ul>
-      </div>
+    </div>
   
       <div class="project-tile">
         <div class="project-title">Telecom Churn Prediction Case Study</div>
@@ -313,17 +338,18 @@
           <li>Identified top churn indicators such as drop in incoming calls and recharge patterns; recommended targeted retention strategies</li>
         </ul>
       </div>
+    
   
       <div class="project-tile">
         <div class="project-title">Lead Scoring Case Study</div>
-        <p class="project-subtitle">Logistic‑regression‑based scoring to rank hot leads for an ed‑tech company and boost conversions.</p>
+        <p class="project-subtitle">Logistic-regression-based scoring to rank hot leads for an ed-tech company and boost conversions.</p>
         <ul>
-          <li>Tech stack: Python, pandas, scikit‑learn; focused on feature engineering, balancing classes, and model calibration</li>
-    <li>Dataset: ~9,000 leads from X Education with ~30% baseline conversion; goal was to raise to ~80% through prioritization</li>
-    <li>Built a logistic regression model to assign each lead a score (0–100); used train/test split, handled missing values and categorical encodings, tuned threshold for sensitivity/specificity</li>
+          <li>Tech stack: Python, pandas, scikit-learn; focused on feature engineering, balancing classes, and model calibration</li>
+    <li>Dataset: ~9,000 leads from X Education with ~30% baseline conversion; goal was to raise to ~80% through prioritization</li>
+    <li>Built a logistic regression model to assign each lead a score (0-100); used train/test split, handled missing values and categorical encodings, tuned threshold for sensitivity/specificity</li>
     <li>Outcome: ~80% accuracy, ~72% precision; key predictors included time spent on site, total visits, lead origin and occupation; recommended using top-scoring leads for sales outreach</li>
         </ul>
-      </div>
+    </div>
 
 
       <div class="project-tile">
@@ -334,21 +360,20 @@
           <li>Built a serverless ETL workflow: fetched JSON data from Spotify API → stored raw data in S3 → triggered Lambda to transform it → cataloged via Glue → enabled SQL querying in Athena</li>
           <li>Impact: Enabled automated, scalable music-data analysis—ideal for exploring trends in playlists (e.g. Top 50 India) and powering analytics dashboards</li>
         </ul>
-      </div>
+    </div>
   
       <div class="project-tile">
         <div class="project-title">Bike Sharing Demand Analysis</div>
         <p class="project-subtitle">Predicting daily bike-sharing demand using multiple linear regression.</p>
         <ul>
-          <li><strong>Tech stack:</strong> Python, Jupyter Notebook, pandas, scikit‑learn; data prep and analysis in Excel/CSV formats.</li>
-    <li><strong>Dataset & goal:</strong> Analyzed a bike-sharing provider’s historical data to model demand variations; key focus on predicting usage based on date, weather, and seasonality.</li>
+          <li><strong>Tech stack:</strong>Python, pandas, scikit-learn,AWS SageMaker, AWS IAM, Streamlit, boto3, joblib.</li>
+    <li><strong>Dataset & goal:</strong> Analyzed a bike-sharing provider's historical data to model demand variations; key focus on predicting usage based on date, weather, and seasonality.</li>
     <li><strong>Modeling:</strong> Built multiple linear regression models to forecast daily bike rentals; engineered features like temperature, humidity, day-of-week, and seasonal trends.</li>
     <li><strong>Impact:</strong> Identified significant demand drivers weather patterns, months, seasons to inform better bike allocation strategies and operational planning.</li>
         </ul>
       </div>
     </div>
   </section>
-  <!-- Include your Professional Experience section -->
 
   
   <!-- Include your Contact section -->
@@ -358,8 +383,7 @@
     <div class="card">
       <div class="card2">
         <form class="form" action="https://formspree.io/f/mblydkdj" method="POST">
-          <div class="form-tile">Let’s build what doesn’t exist yet!</div>
-          <!-- <p id="heading">Let’s build what doesn’t exist yet!</p> -->
+          <div class="form-tile">Let's build what doesn't exist yet!</div>
     
           <div class="field">
             <svg class="input-icon" viewBox="0 0 16 16" fill="currentColor" height="16" width="16">
